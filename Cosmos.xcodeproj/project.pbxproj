@@ -1,1091 +1,766 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>2BB44E48D7B7C8F70755308D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Cosmos.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C6D57F68210301F23ACEF98</key>
-		<dict>
-			<key>fileRef</key>
-			<string>521F6449A4CEA461F92B7E5D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>36210FE8600B04B005527CB5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-CosmosTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C96F91DB2862F003CBA0E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A2C97041DB2862F003CBA0E</string>
-				<string>3A2C97191DB2862F003CBA0E</string>
-				<string>3A2C97031DB2862F003CBA0E</string>
-				<string>BD0F0D0B6A3C00A68500E7B9</string>
-				<string>EBCC736844293D9C460EB68E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C96FA1DB2862F003CBA0E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0800</string>
-				<key>LastUpgradeCheck</key>
-				<string>0800</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Anton Selyanin</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>3A2C97011DB2862F003CBA0E</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-					</dict>
-					<key>3A2C97151DB2862F003CBA0E</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>3A2C97011DB2862F003CBA0E</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>3A2C96FD1DB2862F003CBA0E</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>3A2C96F91DB2862F003CBA0E</string>
-			<key>productRefGroup</key>
-			<string>3A2C97031DB2862F003CBA0E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>3A2C97011DB2862F003CBA0E</string>
-				<string>3A2C97151DB2862F003CBA0E</string>
-			</array>
-		</dict>
-		<key>3A2C96FD1DB2862F003CBA0E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3A2C971D1DB2862F003CBA0E</string>
-				<string>3A2C971E1DB2862F003CBA0E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3A2C96FE1DB2862F003CBA0E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3A2C97081DB2862F003CBA0E</string>
-				<string>3A2C97061DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A2C96FF1DB2862F003CBA0E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2C6D57F68210301F23ACEF98</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A2C97001DB2862F003CBA0E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3A2C97101DB2862F003CBA0E</string>
-				<string>3A2C970D1DB2862F003CBA0E</string>
-				<string>3A2C970B1DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A2C97011DB2862F003CBA0E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3A2C971F1DB2862F003CBA0E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E195565333366257742A0DB5</string>
-				<string>3A2C96FE1DB2862F003CBA0E</string>
-				<string>3A2C96FF1DB2862F003CBA0E</string>
-				<string>3A2C97001DB2862F003CBA0E</string>
-				<string>C82550235C7F391137DC6575</string>
-				<string>EAE1A1911F9A0AB6B150378B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Cosmos</string>
-			<key>productName</key>
-			<string>Cosmos</string>
-			<key>productReference</key>
-			<string>3A2C97021DB2862F003CBA0E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>3A2C97021DB2862F003CBA0E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Cosmos.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3A2C97031DB2862F003CBA0E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A2C97021DB2862F003CBA0E</string>
-				<string>3A2C97161DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C97041DB2862F003CBA0E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A2C97051DB2862F003CBA0E</string>
-				<string>3A2C97071DB2862F003CBA0E</string>
-				<string>3A2C97091DB2862F003CBA0E</string>
-				<string>3A2C970C1DB2862F003CBA0E</string>
-				<string>3A2C970E1DB2862F003CBA0E</string>
-				<string>3A2C97111DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Cosmos</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C97051DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C97061DB2862F003CBA0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A2C97051DB2862F003CBA0E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A2C97071DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C97081DB2862F003CBA0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A2C97071DB2862F003CBA0E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A2C97091DB2862F003CBA0E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A2C970A1DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C970A1DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C970B1DB2862F003CBA0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A2C97091DB2862F003CBA0E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A2C970C1DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C970D1DB2862F003CBA0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A2C970C1DB2862F003CBA0E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A2C970E1DB2862F003CBA0E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A2C970F1DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C970F1DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C97101DB2862F003CBA0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A2C970E1DB2862F003CBA0E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A2C97111DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C97121DB2862F003CBA0E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3A2C971B1DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A2C97131DB2862F003CBA0E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7D1D3549A4EF819DFF86B5E4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A2C97141DB2862F003CBA0E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3A2C97151DB2862F003CBA0E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3A2C97221DB2862F003CBA0E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>BF27BB9C55481AA12BCA43E3</string>
-				<string>3A2C97121DB2862F003CBA0E</string>
-				<string>3A2C97131DB2862F003CBA0E</string>
-				<string>3A2C97141DB2862F003CBA0E</string>
-				<string>A30DCD451068532535BB7459</string>
-				<string>BE4CE52726F1EABBB0A6FE17</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>3A2C97181DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>CosmosTests</string>
-			<key>productName</key>
-			<string>CosmosTests</string>
-			<key>productReference</key>
-			<string>3A2C97161DB2862F003CBA0E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>3A2C97161DB2862F003CBA0E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>CosmosTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3A2C97171DB2862F003CBA0E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>3A2C96FA1DB2862F003CBA0E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>3A2C97011DB2862F003CBA0E</string>
-			<key>remoteInfo</key>
-			<string>Cosmos</string>
-		</dict>
-		<key>3A2C97181DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>3A2C97011DB2862F003CBA0E</string>
-			<key>targetProxy</key>
-			<string>3A2C97171DB2862F003CBA0E</string>
-		</dict>
-		<key>3A2C97191DB2862F003CBA0E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A2C971A1DB2862F003CBA0E</string>
-				<string>3A2C971C1DB2862F003CBA0E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>CosmosTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C971A1DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CosmosTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C971B1DB2862F003CBA0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A2C971A1DB2862F003CBA0E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A2C971C1DB2862F003CBA0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A2C971D1DB2862F003CBA0E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
-				<string>DEBUG</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3A2C971E1DB2862F003CBA0E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Owholemodule</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3A2C971F1DB2862F003CBA0E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3A2C97201DB2862F003CBA0E</string>
-				<string>3A2C97211DB2862F003CBA0E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3A2C97201DB2862F003CBA0E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>2BB44E48D7B7C8F70755308D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Cosmos/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>anton.Cosmos</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3A2C97211DB2862F003CBA0E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>96B68620A01F60CAB8B5F861</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Cosmos/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>anton.Cosmos</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3A2C97221DB2862F003CBA0E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3A2C97231DB2862F003CBA0E</string>
-				<string>3A2C97241DB2862F003CBA0E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3A2C97231DB2862F003CBA0E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D28D865FDDF064A1F6E12A6A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>CosmosTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>anton.CosmosTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Cosmos.app/Cosmos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3A2C97241DB2862F003CBA0E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>36210FE8600B04B005527CB5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
-				<string>YES</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>CosmosTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>anton.CosmosTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Cosmos.app/Cosmos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>50E4C79AD74665361CB2E8D1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_CosmosTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>521F6449A4CEA461F92B7E5D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Cosmos.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7D1D3549A4EF819DFF86B5E4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>50E4C79AD74665361CB2E8D1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>96B68620A01F60CAB8B5F861</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Cosmos.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A30DCD451068532535BB7459</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BD0F0D0B6A3C00A68500E7B9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2BB44E48D7B7C8F70755308D</string>
-				<string>96B68620A01F60CAB8B5F861</string>
-				<string>D28D865FDDF064A1F6E12A6A</string>
-				<string>36210FE8600B04B005527CB5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BE4CE52726F1EABBB0A6FE17</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BF27BB9C55481AA12BCA43E3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>C82550235C7F391137DC6575</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D28D865FDDF064A1F6E12A6A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-CosmosTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E195565333366257742A0DB5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>EAE1A1911F9A0AB6B150378B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>EBCC736844293D9C460EB68E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>521F6449A4CEA461F92B7E5D</string>
-				<string>50E4C79AD74665361CB2E8D1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>3A2C96FA1DB2862F003CBA0E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C6D57F68210301F23ACEF98 /* Pods_Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F6449A4CEA461F92B7E5D /* Pods_Cosmos.framework */; };
+		3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97051DB2862F003CBA0E /* AppDelegate.swift */; };
+		3A2C970D1DB2862F003CBA0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970C1DB2862F003CBA0E /* Assets.xcassets */; };
+		3A2C97101DB2862F003CBA0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */; };
+		3A2C971B1DB2862F003CBA0E /* CosmosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C971A1DB2862F003CBA0E /* CosmosTests.swift */; };
+		3A2C97301DB29965003CBA0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C972F1DB29965003CBA0E /* Coordinator.swift */; };
+		3A2C97321DB29994003CBA0E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97311DB29994003CBA0E /* Router.swift */; };
+		3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97341DB2A081003CBA0E /* Employee.swift */; };
+		3A2C97381DB32F97003CBA0E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97371DB32F97003CBA0E /* ConfigurableCell.swift */; };
+		3A2C973A1DB32FA4003CBA0E /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97391DB32FA4003CBA0E /* TableRow.swift */; };
+		3A2C973C1DB32FAF003CBA0E /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C973B1DB32FAF003CBA0E /* TableSection.swift */; };
+		3A2C973E1DB32FB9003CBA0E /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C973D1DB32FB9003CBA0E /* TableManager.swift */; };
+		3A2C97401DB3387F003CBA0E /* EmpoyeesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C973F1DB3387F003CBA0E /* EmpoyeesListController.swift */; };
+		3A2C97421DB339E6003CBA0E /* StringTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97411DB339E6003CBA0E /* StringTableCell.swift */; };
+		3A2C97441DB344BF003CBA0E /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97431DB344BF003CBA0E /* UITableViewExtensions.swift */; };
+		3A2C97461DB34630003CBA0E /* TableManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97451DB34630003CBA0E /* TableManagerDelegate.swift */; };
+		3A2C97491DB347EE003CBA0E /* EmployeesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97481DB347EE003CBA0E /* EmployeesListPresenter.swift */; };
+		3A2C974B1DB35883003CBA0E /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C974A1DB35883003CBA0E /* DataSource.swift */; };
+		3A2C974D1DB35F3B003CBA0E /* DynamicTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C974C1DB35F3B003CBA0E /* DynamicTableManager.swift */; };
+		3A2C97521DB36958003CBA0E /* StringTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97511DB36958003CBA0E /* StringTableHeader.swift */; };
+		3A2C97551DB36AD5003CBA0E /* EmployeesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97541DB36AD5003CBA0E /* EmployeesHeaderView.swift */; };
+		3A2C97581DB37F66003CBA0E /* EmployeeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97571DB37F66003CBA0E /* EmployeeListService.swift */; };
+		3A2C975C1DB3887A003CBA0E /* ManageEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C975B1DB3887A003CBA0E /* ManageEmployeeController.swift */; };
+		3A2C975E1DB38CC2003CBA0E /* ManageEmployeePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C975D1DB38CC2003CBA0E /* ManageEmployeePresenter.swift */; };
+		3A2C97611DB38E60003CBA0E /* TextWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */; };
+		3A2C97631DB38E75003CBA0E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97621DB38E75003CBA0E /* Functions.swift */; };
+		3A2C97651DB3C0D7003CBA0E /* EditTextWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */; };
+		7D1D3549A4EF819DFF86B5E4 /* Pods_CosmosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A2C97171DB2862F003CBA0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2C96FA1DB2862F003CBA0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A2C97011DB2862F003CBA0E;
+			remoteInfo = Cosmos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BB44E48D7B7C8F70755308D /* Pods-Cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos.debug.xcconfig"; sourceTree = "<group>"; };
+		36210FE8600B04B005527CB5 /* Pods-CosmosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A2C97021DB2862F003CBA0E /* Cosmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cosmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2C97051DB2862F003CBA0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A2C970C1DB2862F003CBA0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A2C970F1DB2862F003CBA0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A2C97111DB2862F003CBA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2C97161DB2862F003CBA0E /* CosmosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2C971A1DB2862F003CBA0E /* CosmosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosTests.swift; sourceTree = "<group>"; };
+		3A2C971C1DB2862F003CBA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2C972F1DB29965003CBA0E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3A2C97311DB29994003CBA0E /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3A2C97341DB2A081003CBA0E /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		3A2C97371DB32F97003CBA0E /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ConfigurableCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A2C97391DB32FA4003CBA0E /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		3A2C973B1DB32FAF003CBA0E /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		3A2C973D1DB32FB9003CBA0E /* TableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TableManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A2C973F1DB3387F003CBA0E /* EmpoyeesListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpoyeesListController.swift; sourceTree = "<group>"; };
+		3A2C97411DB339E6003CBA0E /* StringTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTableCell.swift; sourceTree = "<group>"; };
+		3A2C97431DB344BF003CBA0E /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = UITableViewExtensions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A2C97451DB34630003CBA0E /* TableManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableManagerDelegate.swift; sourceTree = "<group>"; };
+		3A2C97481DB347EE003CBA0E /* EmployeesListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesListPresenter.swift; sourceTree = "<group>"; };
+		3A2C974A1DB35883003CBA0E /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		3A2C974C1DB35F3B003CBA0E /* DynamicTableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DynamicTableManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3A2C97511DB36958003CBA0E /* StringTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTableHeader.swift; sourceTree = "<group>"; };
+		3A2C97541DB36AD5003CBA0E /* EmployeesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesHeaderView.swift; sourceTree = "<group>"; };
+		3A2C97571DB37F66003CBA0E /* EmployeeListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListService.swift; sourceTree = "<group>"; };
+		3A2C975B1DB3887A003CBA0E /* ManageEmployeeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEmployeeController.swift; sourceTree = "<group>"; };
+		3A2C975D1DB38CC2003CBA0E /* ManageEmployeePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEmployeePresenter.swift; sourceTree = "<group>"; };
+		3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWithTitleCell.swift; sourceTree = "<group>"; };
+		3A2C97621DB38E75003CBA0E /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTextWithTitleCell.swift; sourceTree = "<group>"; };
+		50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521F6449A4CEA461F92B7E5D /* Pods_Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B68620A01F60CAB8B5F861 /* Pods-Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos.release.xcconfig"; sourceTree = "<group>"; };
+		D28D865FDDF064A1F6E12A6A /* Pods-CosmosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A2C96FF1DB2862F003CBA0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C6D57F68210301F23ACEF98 /* Pods_Cosmos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2C97131DB2862F003CBA0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D1D3549A4EF819DFF86B5E4 /* Pods_CosmosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A2C96F91DB2862F003CBA0E = {
+			isa = PBXGroup;
+			children = (
+				3A2C97041DB2862F003CBA0E /* Cosmos */,
+				3A2C97191DB2862F003CBA0E /* CosmosTests */,
+				3A2C97031DB2862F003CBA0E /* Products */,
+				BD0F0D0B6A3C00A68500E7B9 /* Pods */,
+				EBCC736844293D9C460EB68E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3A2C97031DB2862F003CBA0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97021DB2862F003CBA0E /* Cosmos.app */,
+				3A2C97161DB2862F003CBA0E /* CosmosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A2C97041DB2862F003CBA0E /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C972E1DB29954003CBA0E /* Core */,
+				3A2C97271DB292F3003CBA0E /* Features */,
+				3A2C97251DB292D9003CBA0E /* Utilities */,
+				3A2C972D1DB2992D003CBA0E /* Misc */,
+				3A2C97051DB2862F003CBA0E /* AppDelegate.swift */,
+			);
+			path = Cosmos;
+			sourceTree = "<group>";
+		};
+		3A2C97191DB2862F003CBA0E /* CosmosTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C971A1DB2862F003CBA0E /* CosmosTests.swift */,
+				3A2C971C1DB2862F003CBA0E /* Info.plist */,
+			);
+			path = CosmosTests;
+			sourceTree = "<group>";
+		};
+		3A2C97251DB292D9003CBA0E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97361DB2A575003CBA0E /* UITableView */,
+				3A2C97621DB38E75003CBA0E /* Functions.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		3A2C97271DB292F3003CBA0E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C972A1DB298A5003CBA0E /* Employees */,
+				3A2C972B1DB298DE003CBA0E /* Gallery */,
+				3A2C972C1DB298EE003CBA0E /* Service */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		3A2C972A1DB298A5003CBA0E /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97661DB3C589003CBA0E /* Service */,
+				3A2C97331DB2A075003CBA0E /* Model */,
+				3A2C975A1DB3883A003CBA0E /* ManageView */,
+				3A2C97591DB3881C003CBA0E /* ListView */,
+			);
+			name = Employees;
+			sourceTree = "<group>";
+		};
+		3A2C972B1DB298DE003CBA0E /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Gallery;
+			sourceTree = "<group>";
+		};
+		3A2C972C1DB298EE003CBA0E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		3A2C972D1DB2992D003CBA0E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C970C1DB2862F003CBA0E /* Assets.xcassets */,
+				3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */,
+				3A2C97111DB2862F003CBA0E /* Info.plist */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		3A2C972E1DB29954003CBA0E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C972F1DB29965003CBA0E /* Coordinator.swift */,
+				3A2C97311DB29994003CBA0E /* Router.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		3A2C97331DB2A075003CBA0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97341DB2A081003CBA0E /* Employee.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3A2C97361DB2A575003CBA0E /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C974E1DB35F47003CBA0E /* DynaminTableManager */,
+				3A2C97471DB34660003CBA0E /* StaticTableManager */,
+				3A2C97561DB36E94003CBA0E /* ConfigurableCell */,
+			);
+			name = UITableView;
+			sourceTree = "<group>";
+		};
+		3A2C97471DB34660003CBA0E /* StaticTableManager */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97391DB32FA4003CBA0E /* TableRow.swift */,
+				3A2C973B1DB32FAF003CBA0E /* TableSection.swift */,
+				3A2C973D1DB32FB9003CBA0E /* TableManager.swift */,
+			);
+			name = StaticTableManager;
+			sourceTree = "<group>";
+		};
+		3A2C974E1DB35F47003CBA0E /* DynaminTableManager */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C974C1DB35F3B003CBA0E /* DynamicTableManager.swift */,
+				3A2C974A1DB35883003CBA0E /* DataSource.swift */,
+				3A2C97451DB34630003CBA0E /* TableManagerDelegate.swift */,
+			);
+			name = DynaminTableManager;
+			sourceTree = "<group>";
+		};
+		3A2C97531DB36A8C003CBA0E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97541DB36AD5003CBA0E /* EmployeesHeaderView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3A2C97561DB36E94003CBA0E /* ConfigurableCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97371DB32F97003CBA0E /* ConfigurableCell.swift */,
+				3A2C97511DB36958003CBA0E /* StringTableHeader.swift */,
+				3A2C97411DB339E6003CBA0E /* StringTableCell.swift */,
+				3A2C97431DB344BF003CBA0E /* UITableViewExtensions.swift */,
+			);
+			name = ConfigurableCell;
+			sourceTree = "<group>";
+		};
+		3A2C97591DB3881C003CBA0E /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97531DB36A8C003CBA0E /* Views */,
+				3A2C973F1DB3387F003CBA0E /* EmpoyeesListController.swift */,
+				3A2C97481DB347EE003CBA0E /* EmployeesListPresenter.swift */,
+			);
+			name = ListView;
+			sourceTree = "<group>";
+		};
+		3A2C975A1DB3883A003CBA0E /* ManageView */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C975F1DB38E4F003CBA0E /* Views */,
+				3A2C975B1DB3887A003CBA0E /* ManageEmployeeController.swift */,
+				3A2C975D1DB38CC2003CBA0E /* ManageEmployeePresenter.swift */,
+			);
+			name = ManageView;
+			sourceTree = "<group>";
+		};
+		3A2C975F1DB38E4F003CBA0E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */,
+				3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3A2C97661DB3C589003CBA0E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C97571DB37F66003CBA0E /* EmployeeListService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		BD0F0D0B6A3C00A68500E7B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BB44E48D7B7C8F70755308D /* Pods-Cosmos.debug.xcconfig */,
+				96B68620A01F60CAB8B5F861 /* Pods-Cosmos.release.xcconfig */,
+				D28D865FDDF064A1F6E12A6A /* Pods-CosmosTests.debug.xcconfig */,
+				36210FE8600B04B005527CB5 /* Pods-CosmosTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EBCC736844293D9C460EB68E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				521F6449A4CEA461F92B7E5D /* Pods_Cosmos.framework */,
+				50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A2C97011DB2862F003CBA0E /* Cosmos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2C971F1DB2862F003CBA0E /* Build configuration list for PBXNativeTarget "Cosmos" */;
+			buildPhases = (
+				E195565333366257742A0DB5 /* [CP] Check Pods Manifest.lock */,
+				3A2C96FE1DB2862F003CBA0E /* Sources */,
+				3A2C96FF1DB2862F003CBA0E /* Frameworks */,
+				3A2C97001DB2862F003CBA0E /* Resources */,
+				C82550235C7F391137DC6575 /* [CP] Embed Pods Frameworks */,
+				EAE1A1911F9A0AB6B150378B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cosmos;
+			productName = Cosmos;
+			productReference = 3A2C97021DB2862F003CBA0E /* Cosmos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A2C97151DB2862F003CBA0E /* CosmosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2C97221DB2862F003CBA0E /* Build configuration list for PBXNativeTarget "CosmosTests" */;
+			buildPhases = (
+				BF27BB9C55481AA12BCA43E3 /* [CP] Check Pods Manifest.lock */,
+				3A2C97121DB2862F003CBA0E /* Sources */,
+				3A2C97131DB2862F003CBA0E /* Frameworks */,
+				3A2C97141DB2862F003CBA0E /* Resources */,
+				A30DCD451068532535BB7459 /* [CP] Embed Pods Frameworks */,
+				BE4CE52726F1EABBB0A6FE17 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A2C97181DB2862F003CBA0E /* PBXTargetDependency */,
+			);
+			name = CosmosTests;
+			productName = CosmosTests;
+			productReference = 3A2C97161DB2862F003CBA0E /* CosmosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A2C96FA1DB2862F003CBA0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Anton Selyanin";
+				TargetAttributes = {
+					3A2C97011DB2862F003CBA0E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					3A2C97151DB2862F003CBA0E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3A2C97011DB2862F003CBA0E;
+					};
+				};
+			};
+			buildConfigurationList = 3A2C96FD1DB2862F003CBA0E /* Build configuration list for PBXProject "Cosmos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A2C96F91DB2862F003CBA0E;
+			productRefGroup = 3A2C97031DB2862F003CBA0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A2C97011DB2862F003CBA0E /* Cosmos */,
+				3A2C97151DB2862F003CBA0E /* CosmosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A2C97001DB2862F003CBA0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2C97101DB2862F003CBA0E /* LaunchScreen.storyboard in Resources */,
+				3A2C970D1DB2862F003CBA0E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2C97141DB2862F003CBA0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A30DCD451068532535BB7459 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE4CE52726F1EABBB0A6FE17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF27BB9C55481AA12BCA43E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C82550235C7F391137DC6575 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E195565333366257742A0DB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAE1A1911F9A0AB6B150378B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A2C96FE1DB2862F003CBA0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2C974B1DB35883003CBA0E /* DataSource.swift in Sources */,
+				3A2C973E1DB32FB9003CBA0E /* TableManager.swift in Sources */,
+				3A2C97611DB38E60003CBA0E /* TextWithTitleCell.swift in Sources */,
+				3A2C973C1DB32FAF003CBA0E /* TableSection.swift in Sources */,
+				3A2C97441DB344BF003CBA0E /* UITableViewExtensions.swift in Sources */,
+				3A2C97381DB32F97003CBA0E /* ConfigurableCell.swift in Sources */,
+				3A2C97301DB29965003CBA0E /* Coordinator.swift in Sources */,
+				3A2C97401DB3387F003CBA0E /* EmpoyeesListController.swift in Sources */,
+				3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */,
+				3A2C97321DB29994003CBA0E /* Router.swift in Sources */,
+				3A2C97551DB36AD5003CBA0E /* EmployeesHeaderView.swift in Sources */,
+				3A2C97421DB339E6003CBA0E /* StringTableCell.swift in Sources */,
+				3A2C97491DB347EE003CBA0E /* EmployeesListPresenter.swift in Sources */,
+				3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */,
+				3A2C973A1DB32FA4003CBA0E /* TableRow.swift in Sources */,
+				3A2C97631DB38E75003CBA0E /* Functions.swift in Sources */,
+				3A2C97651DB3C0D7003CBA0E /* EditTextWithTitleCell.swift in Sources */,
+				3A2C97581DB37F66003CBA0E /* EmployeeListService.swift in Sources */,
+				3A2C975C1DB3887A003CBA0E /* ManageEmployeeController.swift in Sources */,
+				3A2C975E1DB38CC2003CBA0E /* ManageEmployeePresenter.swift in Sources */,
+				3A2C974D1DB35F3B003CBA0E /* DynamicTableManager.swift in Sources */,
+				3A2C97461DB34630003CBA0E /* TableManagerDelegate.swift in Sources */,
+				3A2C97521DB36958003CBA0E /* StringTableHeader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2C97121DB2862F003CBA0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2C971B1DB2862F003CBA0E /* CosmosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A2C97181DB2862F003CBA0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A2C97011DB2862F003CBA0E /* Cosmos */;
+			targetProxy = 3A2C97171DB2862F003CBA0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A2C970F1DB2862F003CBA0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A2C971D1DB2862F003CBA0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A2C971E1DB2862F003CBA0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A2C97201DB2862F003CBA0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB44E48D7B7C8F70755308D /* Pods-Cosmos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cosmos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.Cosmos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3A2C97211DB2862F003CBA0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96B68620A01F60CAB8B5F861 /* Pods-Cosmos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cosmos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.Cosmos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3A2C97231DB2862F003CBA0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D28D865FDDF064A1F6E12A6A /* Pods-CosmosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CosmosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.CosmosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cosmos.app/Cosmos";
+			};
+			name = Debug;
+		};
+		3A2C97241DB2862F003CBA0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36210FE8600B04B005527CB5 /* Pods-CosmosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CosmosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = anton.CosmosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cosmos.app/Cosmos";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A2C96FD1DB2862F003CBA0E /* Build configuration list for PBXProject "Cosmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2C971D1DB2862F003CBA0E /* Debug */,
+				3A2C971E1DB2862F003CBA0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2C971F1DB2862F003CBA0E /* Build configuration list for PBXNativeTarget "Cosmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2C97201DB2862F003CBA0E /* Debug */,
+				3A2C97211DB2862F003CBA0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2C97221DB2862F003CBA0E /* Build configuration list for PBXNativeTarget "CosmosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2C97231DB2862F003CBA0E /* Debug */,
+				3A2C97241DB2862F003CBA0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A2C96FA1DB2862F003CBA0E /* Project object */;
+}
