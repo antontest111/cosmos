@@ -11,7 +11,6 @@
 		3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97051DB2862F003CBA0E /* AppDelegate.swift */; };
 		3A2C970D1DB2862F003CBA0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970C1DB2862F003CBA0E /* Assets.xcassets */; };
 		3A2C97101DB2862F003CBA0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */; };
-		3A2C971B1DB2862F003CBA0E /* CosmosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C971A1DB2862F003CBA0E /* CosmosTests.swift */; };
 		3A2C97301DB29965003CBA0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C972F1DB29965003CBA0E /* Coordinator.swift */; };
 		3A2C97321DB29994003CBA0E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97311DB29994003CBA0E /* Router.swift */; };
 		3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97341DB2A081003CBA0E /* Employee.swift */; };
@@ -34,6 +33,10 @@
 		3A2C97611DB38E60003CBA0E /* TextWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */; };
 		3A2C97631DB38E75003CBA0E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97621DB38E75003CBA0E /* Functions.swift */; };
 		3A2C97651DB3C0D7003CBA0E /* EditTextWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */; };
+		3A2C97681DB3D100003CBA0E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97671DB3D100003CBA0E /* FeedViewController.swift */; };
+		3A2C976A1DB3D117003CBA0E /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97691DB3D117003CBA0E /* FeedPresenter.swift */; };
+		3A2C976C1DB3D122003CBA0E /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C976B1DB3D122003CBA0E /* FeedService.swift */; };
+		3A2C976E1DB3D1A1003CBA0E /* FeedParsingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C976D1DB3D1A1003CBA0E /* FeedParsingTest.swift */; };
 		7D1D3549A4EF819DFF86B5E4 /* Pods_CosmosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +59,6 @@
 		3A2C970F1DB2862F003CBA0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A2C97111DB2862F003CBA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2C97161DB2862F003CBA0E /* CosmosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A2C971A1DB2862F003CBA0E /* CosmosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosTests.swift; sourceTree = "<group>"; };
 		3A2C971C1DB2862F003CBA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2C972F1DB29965003CBA0E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3A2C97311DB29994003CBA0E /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -80,6 +82,10 @@
 		3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWithTitleCell.swift; sourceTree = "<group>"; };
 		3A2C97621DB38E75003CBA0E /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTextWithTitleCell.swift; sourceTree = "<group>"; };
+		3A2C97671DB3D100003CBA0E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3A2C97691DB3D117003CBA0E /* FeedPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		3A2C976B1DB3D122003CBA0E /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		3A2C976D1DB3D1A1003CBA0E /* FeedParsingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParsingTest.swift; sourceTree = "<group>"; };
 		50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F6449A4CEA461F92B7E5D /* Pods_Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B68620A01F60CAB8B5F861 /* Pods-Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +147,7 @@
 		3A2C97191DB2862F003CBA0E /* CosmosTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A2C971A1DB2862F003CBA0E /* CosmosTests.swift */,
+				3A2C976D1DB3D1A1003CBA0E /* FeedParsingTest.swift */,
 				3A2C971C1DB2862F003CBA0E /* Info.plist */,
 			);
 			path = CosmosTests;
@@ -187,6 +193,9 @@
 		3A2C972C1DB298EE003CBA0E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				3A2C97671DB3D100003CBA0E /* FeedViewController.swift */,
+				3A2C97691DB3D117003CBA0E /* FeedPresenter.swift */,
+				3A2C976B1DB3D122003CBA0E /* FeedService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -535,18 +544,21 @@
 				3A2C97401DB3387F003CBA0E /* EmpoyeesListController.swift in Sources */,
 				3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */,
 				3A2C97321DB29994003CBA0E /* Router.swift in Sources */,
+				3A2C976A1DB3D117003CBA0E /* FeedPresenter.swift in Sources */,
 				3A2C97551DB36AD5003CBA0E /* EmployeesHeaderView.swift in Sources */,
 				3A2C97421DB339E6003CBA0E /* StringTableCell.swift in Sources */,
 				3A2C97491DB347EE003CBA0E /* EmployeesListPresenter.swift in Sources */,
 				3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */,
 				3A2C973A1DB32FA4003CBA0E /* TableRow.swift in Sources */,
 				3A2C97631DB38E75003CBA0E /* Functions.swift in Sources */,
+				3A2C976C1DB3D122003CBA0E /* FeedService.swift in Sources */,
 				3A2C97651DB3C0D7003CBA0E /* EditTextWithTitleCell.swift in Sources */,
 				3A2C97581DB37F66003CBA0E /* EmployeeListService.swift in Sources */,
 				3A2C975C1DB3887A003CBA0E /* ManageEmployeeController.swift in Sources */,
 				3A2C975E1DB38CC2003CBA0E /* ManageEmployeePresenter.swift in Sources */,
 				3A2C974D1DB35F3B003CBA0E /* DynamicTableManager.swift in Sources */,
 				3A2C97461DB34630003CBA0E /* TableManagerDelegate.swift in Sources */,
+				3A2C97681DB3D100003CBA0E /* FeedViewController.swift in Sources */,
 				3A2C97521DB36958003CBA0E /* StringTableHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2C971B1DB2862F003CBA0E /* CosmosTests.swift in Sources */,
+				3A2C976E1DB3D1A1003CBA0E /* FeedParsingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
