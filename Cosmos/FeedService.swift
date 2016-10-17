@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import RxSwift
+
+protocol FeedServiceProtocol: class {
+    func rx_fetchFeed() -> Observable<[Quote]>
+}
+
+//class FeedService: FeedServiceProtocol {
+//    func rx_fetchFeed() -> Observable<[Quote]> {
+//        return URLSession.shared.rx.data()
+//    }
+//}
