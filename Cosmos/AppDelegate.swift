@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootViewController?.viewControllers = [
             configureTab(withName: "Employees", image: nil, controller: createEmployees()),
             configureTab(withName: "Gallery", image: nil, controller: UIViewController()),
-            configureTab(withName: "Service", image: nil, controller: UIViewController())
+            configureTab(withName: "Quotes", image: nil, controller: createQuotes())
         ]
         
         window?.rootViewController = rootViewController
@@ -47,6 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             controller?.navigationController?.pushViewController(manage, animated: true)
         }
         
+        return UINavigationController(rootViewController: controller)
+    }
+    
+    private func createQuotes() -> UIViewController {
+        let presenter = FeedPresenter()
+        let controller = FeedViewController(presenter: presenter)
+        controller.title = "Service"
         
         return UINavigationController(rootViewController: controller)
     }

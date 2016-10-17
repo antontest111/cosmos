@@ -8,13 +8,16 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 protocol FeedServiceProtocol: class {
-    func rx_fetchFeed() -> Observable<[Quote]>
+    func fetchFeed(from url: URL) -> Observable<[Quote]>
 }
 
-//class FeedService: FeedServiceProtocol {
-//    func rx_fetchFeed() -> Observable<[Quote]> {
-//        return URLSession.shared.rx.data()
-//    }
-//}
+class FeedService: FeedServiceProtocol {
+    func fetchFeed(from url: URL) -> Observable<[Quote]> {
+        return URLSession.shared.rx
+            .data(URLRequest(url: url))
+            .map(FeedParser.parse)
+    }
+}

@@ -1,18 +1,22 @@
 PODS:
   - Nimble (5.0.0)
   - PureLayout (3.0.2)
+  - RxCocoa (3.0.0-beta.2):
+    - RxSwift (~> 3.0.0-beta.2)
   - RxSwift (3.0.0-beta.2)
 
 DEPENDENCIES:
   - Nimble (~> 5.0.0)
   - PureLayout (~> 3.0.2)
+  - RxCocoa (~> 3.0.0-beta.2)
   - RxSwift (~> 3.0.0-beta.2)
 
 SPEC CHECKSUMS:
   Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  RxCocoa: 1dd105d8a4e18034ccd7bd6d136445363ce67c8e
   RxSwift: 0ea939d7d97cb70657190ffde8dc2a9b455778fc
 
-PODFILE CHECKSUM: 4311cd076c86a96fac9e583222a8c799906fd8b3
+PODFILE CHECKSUM: bca79e785266e5daae2cc4b24a3dab840ba648bd
 
 COCOAPODS: 1.0.1

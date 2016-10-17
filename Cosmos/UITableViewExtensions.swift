@@ -14,6 +14,11 @@ extension UITableView {
         register(cell, forCellReuseIdentifier: cell.reuseIdentifier)
     }
 
+    func register(nib cellType: ReusableView.Type) {
+        register(UINib(nibName: String(describing: cellType), bundle: nil),
+                 forCellReuseIdentifier: cellType.reuseIdentifier)
+    }
+
     func register(header: ReusableView.Type) {
         register(header, forHeaderFooterViewReuseIdentifier: header.reuseIdentifier)
     }

@@ -5,6 +5,7 @@ inhibit_all_warnings!
 
 target "Cosmos" do
     pod 'RxSwift', '~> 3.0.0-beta.2'
+    pod 'RxCocoa', '~> 3.0.0-beta.2'
     pod 'PureLayout', '~> 3.0.2'
 
     target 'CosmosTests' do

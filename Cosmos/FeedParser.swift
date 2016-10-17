@@ -29,40 +29,37 @@ class QuoteParserDelegate: NSObject, XMLParserDelegate {
     private(set) var result: [Quote] = []
     
     private var currentQuote: Quote = Quote(id: "", date: "", text: "")
-    private var readData: (String) -> Void = { _ in }
-    
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-        switchReader(for: elementName)
-    }
+    private var textBuffer: String = ""
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        guard elementName == Tags.quote else { return }
+        let text = textBuffer.trimmingCharacters(in: .whitespacesAndNewlines)
+        textBuffer = ""
         
-        result.append(currentQuote)
-        currentQuote = Quote(id: "", date: "", text: "")
+        switch elementName {
+        case Tags.id:
+            currentQuote.id = text
+            
+        case Tags.date:
+            currentQuote.date = text
+            
+        case Tags.text:
+            currentQuote.text = text
+
+        case Tags.quote:
+            result.append(currentQuote)
+            currentQuote = Quote(id: "", date: "", text: "")
+            
+        default:
+            break
+        }
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        readData(string)
+        textBuffer.append(string)
     }
     
     func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
-        readData(String(data: CDATABlock, encoding: .utf8) ?? "")
-    }
-    
-    private func switchReader(for elementName: String) {
-        switch elementName {
-        case Tags.id:
-            readData = { self.currentQuote.id = $0 }
-            
-        case Tags.date:
-            readData = { self.currentQuote.date = $0 }
-            
-        case Tags.text:
-            readData = { self.currentQuote.text = $0 }
-            
-        default:
-            readData = { _ in }
-        }
+        let string = String(data: CDATABlock, encoding: .utf8) ?? ""
+        textBuffer.append(string)
     }
 }
