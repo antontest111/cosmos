@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         rootViewController?.viewControllers = [
             configureTab(withName: "Employees", image: nil, controller: createEmployees()),
-            configureTab(withName: "Gallery", image: nil, controller: UIViewController()),
+            configureTab(withName: "Gallery", image: nil, controller: createGallery()),
             configureTab(withName: "Quotes", image: nil, controller: createQuotes())
         ]
         
@@ -46,6 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let manage = ManageEmployeeController(presenter: presenter)
             controller?.navigationController?.pushViewController(manage, animated: true)
         }
+        
+        return UINavigationController(rootViewController: controller)
+    }
+    
+    private func createGallery() -> UIViewController {
+        let controller = GalleryViewController()
+        controller.title = "Gallery"
         
         return UINavigationController(rootViewController: controller)
     }
