@@ -25,8 +25,6 @@ class ContainerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
-        
         view.addSubview(imageView)
         imageView.autoPinEdgesToSuperviewEdges()
     }
