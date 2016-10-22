@@ -22,11 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         rootViewController = UITabBarController(nibName: nil, bundle: nil)
         
-        
         rootViewController?.viewControllers = [
             configureTab(withName: "Employees", image: nil, controller: createEmployees()),
             configureTab(withName: "Gallery", image: nil, controller: createGallery()),
-            configureTab(withName: "Quotes", image: nil, controller: createQuotes())
+            configureTab(withName: "Service", image: nil, controller: createQuotes())
         ]
         
         window?.rootViewController = rootViewController
@@ -51,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func createGallery() -> UIViewController {
-        let controller = GalleryViewController()
+        let controller = GalleryViewController(presenter: GalleryPresenter())
         controller.title = "Gallery"
         
         return UINavigationController(rootViewController: controller)

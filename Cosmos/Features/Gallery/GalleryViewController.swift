@@ -10,90 +10,33 @@ import Foundation
 import UIKit
 import PureLayout
 
+protocol GalleryViewProtocol: class {
+    func setNextButton(enabled: Bool)
+    
+    func setPrevButton(enabled: Bool)
+    
+    func preparePage(index: Int)
+    
+    func scrollTo(index: Int)
+}
+
 class GalleryViewController: UIViewController, UIScrollViewDelegate {
-    private let pageCount = 16
-    private var currentIndex: Int = 0
+    fileprivate var prevPage = ContainerController(image: nil)
+    fileprivate var currentPage = ContainerController(image: nil)
+    fileprivate var nextPage = ContainerController(image: nil)
     
-    private var prevPage: ContainerController?
-    private var currentPage: ContainerController?
-    private var nextPage: ContainerController?
+    fileprivate var presenter: GalleryPresenterProtocol
     
-    let scrollView: UIScrollView = with(UIScrollView()) {
+    fileprivate let scrollView: UIScrollView = with(UIScrollView()) {
         $0.isPagingEnabled = true
         $0.showsHorizontalScrollIndicator = false
         $0.showsVerticalScrollIndicator = false
         $0.isDirectionalLockEnabled = true
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    init(presenter: GalleryPresenterProtocol) {
+        self.presenter = presenter
         
-        view.addSubview(scrollView)
-        scrollView.autoPinEdgesToSuperviewEdges()
-        scrollView.delegate = self
-        
-        view.layoutIfNeeded()
-        
-        scrollView.contentSize = CGSize(
-            width: CGFloat(pageCount) * scrollView.frame.width,
-            height: scrollView.frame.height)
-        
-        currentPage = loadPage(index: 0)
-        nextPage = loadPage(index: 1)
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageWidth = scrollView.frame.width
-        let index = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
-
-        switchPage(index: index)
-    }
-    
-    private func switchPage(index: Int) {
-        guard (0..<pageCount).contains(index)  else { return }
-        
-        if index > currentIndex {
-            prevPage?.removeFromParentViewController()
-            prevPage?.didMove(toParentViewController: nil)
-            
-            prevPage = currentPage
-            currentPage = nextPage
-            nextPage = loadPage(index: index + 1)
-        } else {
-            nextPage?.removeFromParentViewController()
-            nextPage?.didMove(toParentViewController: nil)
-            
-            nextPage = currentPage
-            currentPage = prevPage
-            prevPage = loadPage(index: index - 1)
-        }
-    }
-    
-    private func loadPage(index: Int) -> ContainerController? {
-        guard (0..<pageCount).contains(index) else { return nil }
-        
-        let size = scrollView.frame.size
-        let origin = CGPoint(x: CGFloat(index) * size.width, y: 0)
-        let frame = CGRect(origin: origin, size: size)
-        
-        let page = ContainerController(image: UIImage(named: "image\(index).jpg"))
-        
-        page.view.frame = frame
-        
-        addChildViewController(page)
-        scrollView.addSubview(page.view)
-        page.didMove(toParentViewController: self)
-        
-        return page
-    }
-}
-
-class ContainerController: UIViewController {
-    private let imageView: UIImageView
-    
-    init(image: UIImage?) {
-        imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFit
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -104,7 +47,85 @@ class ContainerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(imageView)
-        imageView.autoPinEdgesToSuperviewEdges()
+        let image = UIImage.image(ofColor: UIColor(white: 1, alpha: 0.5))
+        navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+        navigationController?.navigationBar.barStyle = .default
+        
+        view.addSubview(scrollView)
+        scrollView.autoPinEdgesToSuperviewEdges()
+        scrollView.delegate = self
+        
+        view.layoutIfNeeded()
+        
+        scrollView.contentSize = CGSize(
+            width: CGFloat(presenter.pagesCount) * scrollView.frame.width,
+            height: scrollView.frame.height)
+        
+        navigationItem.leftBarButtonItem =
+            UIBarButtonItem(title: "Prev", style: .plain, target: self, action: #selector(tappedPrev))
+        
+        navigationItem.rightBarButtonItem =
+            UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(tappedNext))
+        
+        presenter.bind(view: self)
+    }
+    
+    func tappedPrev() {
+        presenter.tappedPrevious()
+    }
+    
+    func tappedNext() {
+        presenter.tappedNext()
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.width
+        let index = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth)) + 1
+        
+        presenter.switchedIndex(to: index)
+    }
+    
+    fileprivate func load(page: ContainerController, index: Int) {
+        guard (0..<presenter.pagesCount).contains(index) else { return }
+        
+        let size = scrollView.bounds.size
+        let origin = CGPoint(x: CGFloat(index) * size.width, y: 0)
+        let frame = CGRect(origin: origin, size: size)
+        
+        page.set(image: presenter.image(at: index))
+        
+        page.view.frame = frame
+        
+        guard page.view.superview == nil else { return }
+        
+        addChildViewController(page)
+        scrollView.addSubview(page.view)
+        page.didMove(toParentViewController: self)
+        
+    }
+}
+
+extension GalleryViewController: GalleryViewProtocol {
+    func setNextButton(enabled: Bool) {
+        navigationItem.rightBarButtonItem?.isEnabled = enabled
+    }
+    
+    func setPrevButton(enabled: Bool) {
+        navigationItem.leftBarButtonItem?.isEnabled = enabled
+    }
+
+    func scrollTo(index: Int) {
+        let pageWidth = scrollView.bounds.width
+        let pageHeight = scrollView.bounds.height
+        
+        let rect = CGRect(x: pageWidth * CGFloat(index), y: 0, width: pageWidth, height: pageHeight)
+        
+        scrollView.scrollRectToVisible(rect, animated: true)
+    }
+    
+    func preparePage(index: Int) {
+        load(page: prevPage, index: index - 1)
+        load(page: currentPage, index: index)
+        load(page: nextPage, index: index + 1)
     }
 }
