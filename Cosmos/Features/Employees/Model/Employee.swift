@@ -8,50 +8,52 @@
 
 import Foundation
 
-struct Employee {
-    let id: Int
-    
-    var personID: PersonID
-    var salary: Money
-    var role: EmployeeRole
-    
-    var type: EmployeeType {
-        switch role {
-        case .manager:
-            return .manager
-        
-        case .worker(_, _, .simple):
-            return .simpleWorker
-        
-        case .worker(_, _, .accountant):
-            return .accountant
-        }
-    }
-}
-
-struct PersonID {
-    var firstName: String
-    var lastName: String
-    
-    var fullName: String {
-        return "\(firstName) \(lastName)"
-    }
-}
-
-enum EmployeeRole {
-    case manager(receptionHours: Time)
-    case worker(placeNumber: PlaceNumber, lunchTime: Time, type: WorkerType)
-}
-
-enum WorkerType {
-    case simple
-    case accountant(AccountantType)
-}
+//struct Employee {
+//    let id: Int
+//    
+//    var personID: PersonID
+//    var salary: Money
+//    var role: EmployeeRole
+//    
+//    var type: EmployeeType {
+//        switch role {
+//        case .manager:
+//            return .manager
+//        
+//        case .worker(_, _, .simple):
+//            return .worker
+//        
+//        case .worker(_, _, .accountant):
+//            return .accountant
+//        }
+//    }
+//}
+//
+//struct PersonID {
+//    var firstName: String
+//    var lastName: String
+//    
+//    var fullName: String {
+//        return "\(firstName) \(lastName)"
+//    }
+//}
+//
+//enum EmployeeRole {
+//    case manager(receptionHours: Time)
+//    case worker(placeNumber: PlaceNumber, lunchTime: Time, type: WorkerType)
+//}
+//
+//enum WorkerType {
+//    case simple
+//    case accountant(AccountantType)
+//}
 
 enum EmployeeType: Int {
     case manager = 0
-    case simpleWorker
+    case worker
     case accountant
+    
+    static var values: [EmployeeType] = [.manager, .worker, .accountant]
 }
 
 typealias Money = Int

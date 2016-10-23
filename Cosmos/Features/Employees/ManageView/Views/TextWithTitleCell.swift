@@ -10,23 +10,6 @@ import Foundation
 import UIKit
 import PureLayout
 
-extension EmployeeFieldType {
-    var title: String {
-        switch self {
-        case .firstName:
-            return "First Name"
-        case .lastName:
-            return "Last Name"
-            
-        case .salary:
-            return "Salary"
-            
-        default:
-            return "UNEXPECTED"
-        }
-    }
-}
-
 class TextWithTitleCell: UITableViewCell {
     fileprivate var viewModel: EmployeeFieldViewModel?
     

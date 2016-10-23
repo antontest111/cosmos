@@ -12,9 +12,7 @@ import PureLayout
 class EmployeesTableHeader: UITableViewHeaderFooterView, ConfigurableCell {
     private let customLabel: UILabel = UILabel()
 
-    static var preferredHeight: CGFloat {
-        return 30
-    }
+    static let preferredHeight: CGFloat = 30
 
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)

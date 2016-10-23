@@ -7,12 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
-    private var rootViewController: UITabBarController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
     
@@ -20,28 +19,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        rootViewController = UITabBarController(nibName: nil, bundle: nil)
+        Persistence.setup()
         
-        rootViewController?.viewControllers = [
+        window?.rootViewController = createRootController()
+        window?.makeKeyAndVisible()
+        return true
+    }
+    
+    private func createRootController() -> UIViewController {
+        let rootViewController = UITabBarController(nibName: nil, bundle: nil)
+        rootViewController.viewControllers = [
             configureTab(withName: "Employees", image: nil, controller: createEmployees()),
             configureTab(withName: "Gallery", image: nil, controller: createGallery()),
             configureTab(withName: "Service", image: nil, controller: createQuotes())
         ]
         
-        window?.rootViewController = rootViewController
-        window?.makeKeyAndVisible()
-        return true
+        return rootViewController
     }
     
     private func createEmployees() -> UIViewController {
-        let service = EmployeeService()
+        let realm = try! Realm()
+        
+        let service = EmployeeService2(realm: realm)
         let presenter = EmployeesListPresenter(service: service)
 
         let controller = EmployeesListController(presenter: presenter)
         controller.title = "Employees"
 
         presenter.selectedEmployee = { [weak controller] employee in
-            let presenter = ManageEmployeePresenter(employee: employee, service: service)
+//            let presenter = ManageEmployeePresenter(employee: employee, service: service)
+            let service = ManageEmployeeService2(employee: employee, realm: realm)
+            let presenter = ManageEmployeePresenter(service: service)
             let manage = ManageEmployeeController(presenter: presenter)
             controller?.navigationController?.pushViewController(manage, animated: true)
         }

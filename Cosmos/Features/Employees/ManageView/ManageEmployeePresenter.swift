@@ -8,24 +8,9 @@
 
 import Foundation
 
-enum EmployeeFieldType {
-    case firstName
-    case lastName
-    case salary
-    case role
-}
-
-class EmployeeFieldViewModel {
-    let type: EmployeeFieldType
-    var value: String
-    
-    init(type: EmployeeFieldType, value: String) {
-        self.type = type
-        self.value = value
-    }
-}
-
 protocol ManageEmployeePresenterProtocol: class {
+    var employeeType: EmployeeType { get }
+    
     func tappedEdit()
     
     func tappedCancel()
@@ -36,20 +21,22 @@ protocol ManageEmployeePresenterProtocol: class {
 }
 
 class ManageEmployeePresenter: ManageEmployeePresenterProtocol {
-    private let service: ManageEmployeeService
-    private var employee: Employee
+    private let service: ManageEmployeeServiceProtocol
     private weak var view: ManageEmployeeViewProtocol?
     
-    private var fields: [EmployeeFieldViewModel] = []
+    private var fields: [[EmployeeFieldViewModel]] = []
     
-    init(employee: Employee, service: ManageEmployeeService) {
-        self.employee = employee
+    init(service: ManageEmployeeServiceProtocol) {
         self.service = service
+    }
+    
+    var employeeType: EmployeeType {
+        return service.employeeType
     }
     
     func bind(view: ManageEmployeeViewProtocol) {
         self.view = view
-        self.fields = createFields(from: employee)
+        self.fields = service.fields()
         view.set(mode: .view, fields: fields)
     }
     
@@ -58,36 +45,12 @@ class ManageEmployeePresenter: ManageEmployeePresenterProtocol {
     }
     
     func tappedCancel() {
-        self.fields = createFields(from: employee)
+        self.fields = service.fields()
         view?.set(mode: .view, fields: fields)
     }
     
     func tappedSave() {
         view?.set(mode: .view, fields: fields)
-    }
-    
-    private func createFields(from employee: Employee) -> [EmployeeFieldViewModel] {
-        return [
-            EmployeeFieldViewModel(type: .firstName, value: employee.personID.firstName),
-            EmployeeFieldViewModel(type: .lastName, value: employee.personID.lastName),
-            EmployeeFieldViewModel(type: .salary, value: String(describing: employee.salary))
-        ]
-    }
-    
-    private func modifyEmployee() {
-        for field in fields {
-            switch field.type {
-            case .firstName:
-                employee.personID.firstName = field.value
-                
-            case .lastName:
-                employee.personID.firstName = field.value
-            
-            default:
-                break
-            }
-        }
-        
-        service.save(employee: employee)
+        service.save(fields: Array(fields.joined()))
     }
 }

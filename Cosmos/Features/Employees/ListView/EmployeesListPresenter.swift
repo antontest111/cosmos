@@ -8,36 +8,46 @@
 
 import Foundation
 
-
-protocol EmployeesListViewProtocol: class {
-    func setEditMode(enabled: Bool)
-}
-
 protocol EmployeesListPresenterProtocol: class {
     var dataSource: DataSource<EmployeeType, String> { get }
     
     func tappedAddNewEmployee()
+    
+    func bind(view: EmployeesListViewProtocol)
 }
 
 protocol EmployeesListOutput: class {
-    var selectedEmployee: ((Employee) -> Void)? { get }
+    var selectedEmployee: ((Employee2) -> Void)? { get }
     
     var addNewEmployee: (() -> Void)? { get }
 }
 
 class EmployeesListPresenter: EmployeesListPresenterProtocol, EmployeesListOutput {
-    fileprivate let service: EmployeeListService
+    fileprivate let service: EmployeeListService2
     private(set) lazy var dataSource: DataSource<EmployeeType, String> = DataSource(dataSource: self)
-    
-    var selectedEmployee: ((Employee) -> Void)?
+    fileprivate weak var view: EmployeesListViewProtocol?
+
+    var selectedEmployee: ((Employee2) -> Void)?
     var addNewEmployee: (() -> Void)?
     
-    init(service: EmployeeListService = EmployeeService()) {
+    init(service: EmployeeListService2) {
         self.service = service
+        service.listener = self
     }
     
     func tappedAddNewEmployee() {
         addNewEmployee?()
+    }
+    
+    func bind(view: EmployeesListViewProtocol) {
+        self.view = view
+        view.reloadData()
+    }
+}
+
+extension EmployeesListPresenter: EmployeeListServiceListener {
+    func reloadData() {
+        view?.reloadData()
     }
 }
 
@@ -47,7 +57,7 @@ extension EmployeesListPresenter: DataSourceProtocol {
     }
     
     func row(for indexPath: IndexPath) -> String {
-        return service.employee(at: indexPath).personID.fullName
+        return service.employee(at: indexPath).person?.fullName ?? ""
     }
     
     var sectionsCount: Int {
@@ -67,7 +77,8 @@ extension EmployeesListPresenter: DataSourceProtocol {
     }
     
     func canMoveRow(at indexPath: IndexPath) -> Bool {
-        return true
+//        return true
+        return false
     }
     
     func selectedRow(at indexPath: IndexPath) {

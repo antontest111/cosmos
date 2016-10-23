@@ -10,13 +10,18 @@ import Foundation
 import UIKit
 import PureLayout
 
-class EmployeesListController: UIViewController {
+protocol EmployeesListViewProtocol: class {
+//    func setEditMode(enabled: Bool)
+    func reloadData()
+}
+
+class EmployeesListController: UIViewController, EmployeesListViewProtocol {
     private let tableManager: DynamicTableManager<EmployeeType, String, StringTableCell, EmployeesTableHeader>
     private let tableView: UITableView
     
     private let presenter: EmployeesListPresenterProtocol
     
-    init(presenter: EmployeesListPresenterProtocol = EmployeesListPresenter()) {
+    init(presenter: EmployeesListPresenterProtocol) {
         self.presenter = presenter
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableManager = DynamicTableManager(tableView: tableView, dataSource: presenter.dataSource)
@@ -33,7 +38,7 @@ class EmployeesListController: UIViewController {
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
         
-        tableView.reloadData()
+        presenter.bind(view: self)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Edit", style: .plain, target: self, action: #selector(editMode))
@@ -45,6 +50,10 @@ class EmployeesListController: UIViewController {
         } else {
             tableView.setEditing(true, animated: true)
         }
+    }
+    
+    func reloadData() {
+        tableManager.reloadData()
     }
 }
 

@@ -18,13 +18,13 @@ private typealias ViewFieldRow = TableRow<EmployeeFieldViewModel, TextWithTitleC
 private typealias EditFieldRow = TableRow<EmployeeFieldViewModel, EditTextWithTitleCell>
 
 protocol ManageEmployeeViewProtocol: class {
-    func set(mode: ManagingMode, fields: [EmployeeFieldViewModel])
+    func set(mode: ManagingMode, fields: [[EmployeeFieldViewModel]])
 }
 
 class ManageEmployeeController: UIViewController {
     fileprivate let tableView: UITableView
     fileprivate let tableManager: TableManager
-    private let presenter: ManageEmployeePresenter
+    fileprivate let presenter: ManageEmployeePresenter
     
     fileprivate var doneButton: UIBarButtonItem {
         return UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(tappedSave))
@@ -39,7 +39,9 @@ class ManageEmployeeController: UIViewController {
     }
 
     init(presenter: ManageEmployeePresenter) {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.allowsSelection = false
+        
         self.tableManager = TableManager(tableView: tableView)
         self.tableView = tableView
         self.presenter = presenter
@@ -52,6 +54,7 @@ class ManageEmployeeController: UIViewController {
         
         tableView.register(cell: TextWithTitleCell.reusableType)
         tableView.register(cell: EditTextWithTitleCell.reusableType)
+        tableView.register(nib: EmployeeTypeSelectorCell.self)
         tableView.autoPinEdgesToSuperviewEdges()
         presenter.bind(view: self)
     }
@@ -73,17 +76,30 @@ class ManageEmployeeController: UIViewController {
     }
 }
 
+extension ManageEmployeeController: EmployeeTypeSelectorDelegate {
+    var employeeType: EmployeeType {
+        get {
+            return presenter.employeeType
+        }
+        set {
+            print(">>> Selected type: \(newValue)")
+//            employeeType = 
+        }
+    }
+}
+
 extension ManageEmployeeController: ManageEmployeeViewProtocol {
-    func set(mode: ManagingMode, fields: [EmployeeFieldViewModel]) {
-        let rows: [Row]
+    func set(mode: ManagingMode, fields: [[EmployeeFieldViewModel]]) {
+        var rows: [[Row]] = []
         switch mode {
         case .view:
-            rows = convertToViewRows(fields)
+            rows.append(contentsOf: fields.map(convertToViewRows))
         case .edit:
-            rows = convertToEditRows(fields)
+            rows.append([TableRow<EmployeeTypeSelectorDelegate, EmployeeTypeSelectorCell>(item: self)])
+            rows.append(contentsOf: fields.map(convertToEditRows))
         }
         
-        tableManager.setSection(rows: rows)
+        tableManager.setSections(rows: rows)
         switchMode(mode)
     }
 

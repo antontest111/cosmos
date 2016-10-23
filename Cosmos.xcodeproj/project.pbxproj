@@ -10,6 +10,13 @@
 		2C6D57F68210301F23ACEF98 /* Pods_Cosmos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F6449A4CEA461F92B7E5D /* Pods_Cosmos.framework */; };
 		3A295D401DBB20660052A9A1 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D3F1DBB20660052A9A1 /* GalleryPresenter.swift */; };
 		3A295D421DBB96770052A9A1 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D411DBB96770052A9A1 /* UIImageExtensions.swift */; };
+		3A295D441DBBC45E0052A9A1 /* RealmEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D431DBBC45E0052A9A1 /* RealmEmployee.swift */; };
+		3A295D461DBC7FA20052A9A1 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D451DBC7FA20052A9A1 /* EmployeeService.swift */; };
+		3A295D481DBC8C180052A9A1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D471DBC8C180052A9A1 /* Persistence.swift */; };
+		3A295D4A1DBCAD220052A9A1 /* ManageEmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D491DBCAD220052A9A1 /* ManageEmployeeService.swift */; };
+		3A295D4C1DBCC95F0052A9A1 /* EmployeeFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D4B1DBCC95F0052A9A1 /* EmployeeFieldType.swift */; };
+		3A295D4E1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D4D1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift */; };
+		3A295D501DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A295D4F1DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib */; };
 		3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97051DB2862F003CBA0E /* AppDelegate.swift */; };
 		3A2C970D1DB2862F003CBA0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970C1DB2862F003CBA0E /* Assets.xcassets */; };
 		3A2C97101DB2862F003CBA0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */; };
@@ -79,6 +86,13 @@
 		36210FE8600B04B005527CB5 /* Pods-CosmosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CosmosTests/Pods-CosmosTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A295D3F1DBB20660052A9A1 /* GalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
 		3A295D411DBB96770052A9A1 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		3A295D431DBBC45E0052A9A1 /* RealmEmployee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmEmployee.swift; sourceTree = "<group>"; };
+		3A295D451DBC7FA20052A9A1 /* EmployeeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
+		3A295D471DBC8C180052A9A1 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3A295D491DBCAD220052A9A1 /* ManageEmployeeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEmployeeService.swift; sourceTree = "<group>"; };
+		3A295D4B1DBCC95F0052A9A1 /* EmployeeFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeFieldType.swift; sourceTree = "<group>"; };
+		3A295D4D1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTypeSelectorCell.swift; sourceTree = "<group>"; };
+		3A295D4F1DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeTypeSelectorCell.xib; sourceTree = "<group>"; };
 		3A2C97021DB2862F003CBA0E /* Cosmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cosmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2C97051DB2862F003CBA0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A2C970C1DB2862F003CBA0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -300,6 +314,9 @@
 			isa = PBXGroup;
 			children = (
 				3A2C97341DB2A081003CBA0E /* Employee.swift */,
+				3A295D431DBBC45E0052A9A1 /* RealmEmployee.swift */,
+				3A295D451DBC7FA20052A9A1 /* EmployeeService.swift */,
+				3A295D471DBC8C180052A9A1 /* Persistence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,6 +386,8 @@
 				3A2C975F1DB38E4F003CBA0E /* Views */,
 				3A2C975B1DB3887A003CBA0E /* ManageEmployeeController.swift */,
 				3A2C975D1DB38CC2003CBA0E /* ManageEmployeePresenter.swift */,
+				3A295D491DBCAD220052A9A1 /* ManageEmployeeService.swift */,
+				3A295D4B1DBCC95F0052A9A1 /* EmployeeFieldType.swift */,
 			);
 			path = ManageView;
 			sourceTree = "<group>";
@@ -378,6 +397,8 @@
 			children = (
 				3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */,
 				3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */,
+				3A295D4D1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift */,
+				3A295D4F1DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -519,6 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A295D501DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib in Resources */,
 				3ABE69941DB683BD00B50FE5 /* image12.jpg in Resources */,
 				3ABE69831DB6829F00B50FE5 /* image4.jpg in Resources */,
 				3ABE69841DB6829F00B50FE5 /* image5.jpg in Resources */,
@@ -593,7 +615,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C82550235C7F391137DC6575 /* [CP] Embed Pods Frameworks */ = {
@@ -623,7 +645,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EAE1A1911F9A0AB6B150378B /* [CP] Copy Pods Resources */ = {
@@ -649,21 +671,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2C974B1DB35883003CBA0E /* DataSource.swift in Sources */,
+				3A295D4A1DBCAD220052A9A1 /* ManageEmployeeService.swift in Sources */,
 				3A2C97781DB521D4003CBA0E /* QuoteTableCell.swift in Sources */,
+				3A295D461DBC7FA20052A9A1 /* EmployeeService.swift in Sources */,
 				3A2C973E1DB32FB9003CBA0E /* TableManager.swift in Sources */,
 				3A2C97611DB38E60003CBA0E /* TextWithTitleCell.swift in Sources */,
 				3A2C97711DB503FE003CBA0E /* FeedParser.swift in Sources */,
 				3A2C973C1DB32FAF003CBA0E /* TableSection.swift in Sources */,
 				3A2C97441DB344BF003CBA0E /* UITableViewExtensions.swift in Sources */,
 				3A2C97381DB32F97003CBA0E /* ConfigurableCell.swift in Sources */,
+				3A295D481DBC8C180052A9A1 /* Persistence.swift in Sources */,
 				3A2C97301DB29965003CBA0E /* Coordinator.swift in Sources */,
 				3A2C97401DB3387F003CBA0E /* EmpoyeesListController.swift in Sources */,
+				3A295D4E1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift in Sources */,
 				3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */,
 				3A2C97321DB29994003CBA0E /* Router.swift in Sources */,
 				3A295D421DBB96770052A9A1 /* UIImageExtensions.swift in Sources */,
+				3A295D441DBBC45E0052A9A1 /* RealmEmployee.swift in Sources */,
 				3A2C976A1DB3D117003CBA0E /* FeedPresenter.swift in Sources */,
 				3A2C97731DB50420003CBA0E /* Quote.swift in Sources */,
 				3A2C97551DB36AD5003CBA0E /* EmployeesHeaderView.swift in Sources */,
+				3A295D4C1DBCC95F0052A9A1 /* EmployeeFieldType.swift in Sources */,
 				3A2C97421DB339E6003CBA0E /* StringTableCell.swift in Sources */,
 				3A295D401DBB20660052A9A1 /* GalleryPresenter.swift in Sources */,
 				3A2C97491DB347EE003CBA0E /* EmployeesListPresenter.swift in Sources */,

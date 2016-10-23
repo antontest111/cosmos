@@ -30,6 +30,10 @@ class DynamicTableManager<Section, Row, Cell: ConfigurableCell, Header: Configur
         tableView.register(header: Header.reusableType)
     }
     
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.rowsCount(in: section)
     }

@@ -49,4 +49,9 @@ extension TableManager {
     func append(section: TableSection) {
         sections.append(section)
     }
+    
+    func setSections(rows: [[Row]]) {
+        sections = rows.map(TableSection.init(rows:))
+        tableView.reloadData()
+    }
 }
