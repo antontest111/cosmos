@@ -58,6 +58,6 @@ class Person: Object {
     dynamic var lastName: String = ""
     
     var fullName: String {
-        return "\(firstName) \(lastName)"
+        return "\(lastName), \(firstName)"
     }
 }

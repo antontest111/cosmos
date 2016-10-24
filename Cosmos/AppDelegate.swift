@@ -40,21 +40,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func createEmployees() -> UIViewController {
         let realm = try! Realm()
         
-        let service = EmployeeService2(realm: realm)
+        let service = EmployeeService(realm: realm)
         let presenter = EmployeesListPresenter(service: service)
 
         let controller = EmployeesListController(presenter: presenter)
         controller.title = "Employees"
 
         presenter.selectedEmployee = { [weak controller] employee in
-            let service = ManageEmployeeService2(employee: employee, realm: realm, dataService: service)
+            let service = ManageEmployeeService(employee: employee, realm: realm, dataService: service)
             let presenter = ManageEmployeePresenter(service: service)
             let manage = ManageEmployeeController(presenter: presenter)
             controller?.navigationController?.pushViewController(manage, animated: true)
         }
         
         presenter.addNewEmployee = { [weak controller] in
-            let service = ManageEmployeeService2(employee: Manager(), realm: realm, dataService: service)
+            let service = ManageEmployeeService(employee: Manager(), realm: realm, dataService: service)
             let presenter = ManageEmployeePresenter(service: service)
             let manage = ManageEmployeeController(presenter: presenter)
             controller?.navigationController?.pushViewController(manage, animated: true)

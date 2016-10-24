@@ -23,35 +23,49 @@ class Persistence {
     private static func setupData() {
         let realm = try! Realm()
         
+        // Check if base is empty
         guard realm.objects(Person.self).isEmpty else { return  }
+        
+        let firstNames = ["Jane", "Olivia", "Ron", "Harry", "Hellen", "Jack"]
+        let secondNames = ["Smith", "Kane", "Kumar", "Oliver", "Clark", "Stone"]
+        
+        // Generate names
+        var names: [(String, String)] = firstNames.reduce([]) { state, next in
+            return state + secondNames.map({ (next, $0) })
+        }
+        
+        // Get random name
+        let nextName: () -> (String, String) = {
+            return names.remove(at: Int(arc4random()) % names.count)
+        }
         
         var index = -1
         let nextIndex = { () -> Int in index += 1; return index }
-        
-        let managers = [
-            Manager(value: [generateId(), ["Jane", "Manager1"], 100, nextIndex(), "1-2"]),
-            Manager(value: [generateId(), ["Harry", "Manager2"], 100, nextIndex(), "1-2"]),
-            Manager(value: [generateId(), ["Olivia", "Manager3"], 100, nextIndex(), "1-2"]),
-            Manager(value: [generateId(), ["Martin", "Manager4"], 100, nextIndex(), "1-2"])
-        ]
-        
+
+        // Generate managers, sorted by name :)
+        let managers = times(4, producer: nextName)
+            .sorted(by: <)
+            .map {
+                Manager(value: [generateId(), [$0, $1], 100, nextIndex(), "1-2"])
+            }
+
         index = -1
-        
-        let workers = [
-            Worker(value: [generateId(), ["Helen", "Worker1"], 100, nextIndex(), "place 1", "12-13"]),
-            Worker(value: [generateId(), ["Justin", "Worker2"], 100, nextIndex(), "place 2", "12-13"]),
-            Worker(value: [generateId(), ["Mario", "Worker3"], 100, nextIndex(), "place 3", "12-13"]),
-            Worker(value: [generateId(), ["Olga", "Worker4"], 100, nextIndex(), "place 4", "12-13"]),
-        ]
-        
+
+        // Generate workers, sorted by name :)
+        let workers = times(4, producer: nextName)
+            .sorted(by: <)
+            .map {
+                Worker(value: [generateId(), [$0, $1], 100, nextIndex(), "place \(index)", "12-13"])
+            }
+
         index = -1
-        
-        let accountants = [
-            Accountant(value: [generateId(), ["Helen", "Accountant1"], 100, nextIndex(), "place A1", "12-13", 0]),
-            Accountant(value: [generateId(), ["Mark", "Accountant2"], 100, nextIndex(), "place A2", "12-13", 1]),
-            Accountant(value: [generateId(), ["Clark", "Accountant3"], 100, nextIndex(), "place A3", "12-13", 0]),
-            Accountant(value: [generateId(), ["Brin", "Accountant4"], 100, nextIndex(), "place A4", "12-13", 1]),
-        ]
+
+        // Generate accountants, sorted by name :)
+        let accountants = times(4, producer: nextName)
+            .sorted(by: <)
+            .map {
+                Accountant(value: [generateId(), [$0, $1], 100, nextIndex(), "place A\(index)", "12-13", Int(arc4random() % 2)])
+            }
         
         try! realm.write {
             realm.add(managers)
@@ -63,4 +77,18 @@ class Persistence {
 
 private func generateId() -> String {
     return UUID().uuidString
+}
+
+
+private func times<T>(_ n: Int, producer: () -> T) -> [T] {
+    var result = [T]()
+    for _ in 0..<n {
+        result.append(producer())
+    }
+    
+    return result
+}
+
+private func <(lhs: (String, String), rhs: (String, String)) -> Bool {
+    return "\(lhs.1) \(lhs.0)" < "\(rhs.1) \(rhs.0)"
 }

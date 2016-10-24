@@ -37,7 +37,7 @@ protocol EmployeeListServiceListener: class {
     func reloadData()
 }
 
-class EmployeeService2: EmployeeListService {
+class EmployeeService: EmployeeListService {
     weak var listener: EmployeeListServiceListener?
     
     fileprivate let realm: Realm
@@ -114,7 +114,7 @@ class EmployeeService2: EmployeeListService {
 }
 
 
-extension EmployeeService2: EmployeeDataService {
+extension EmployeeService: EmployeeDataService {
     func createEmployee(ofType type: EmployeeType) -> Employee {
         switch type {
         case .manager:

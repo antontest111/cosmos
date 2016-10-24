@@ -30,8 +30,6 @@
 		3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97051DB2862F003CBA0E /* AppDelegate.swift */; };
 		3A2C970D1DB2862F003CBA0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970C1DB2862F003CBA0E /* Assets.xcassets */; };
 		3A2C97101DB2862F003CBA0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */; };
-		3A2C97301DB29965003CBA0E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C972F1DB29965003CBA0E /* Coordinator.swift */; };
-		3A2C97321DB29994003CBA0E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97311DB29994003CBA0E /* Router.swift */; };
 		3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97341DB2A081003CBA0E /* Employee.swift */; };
 		3A2C97381DB32F97003CBA0E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97371DB32F97003CBA0E /* ConfigurableCell.swift */; };
 		3A2C973A1DB32FA4003CBA0E /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97391DB32FA4003CBA0E /* TableRow.swift */; };
@@ -121,8 +119,6 @@
 		3A2C97111DB2862F003CBA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2C97161DB2862F003CBA0E /* CosmosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2C971C1DB2862F003CBA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A2C972F1DB29965003CBA0E /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		3A2C97311DB29994003CBA0E /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3A2C97341DB2A081003CBA0E /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		3A2C97371DB32F97003CBA0E /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ConfigurableCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2C97391DB32FA4003CBA0E /* TableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
@@ -243,7 +239,6 @@
 		3A2C97041DB2862F003CBA0E /* Cosmos */ = {
 			isa = PBXGroup;
 			children = (
-				3A2C972E1DB29954003CBA0E /* Core */,
 				3A2C97271DB292F3003CBA0E /* Features */,
 				3A2C972D1DB2992D003CBA0E /* Misc */,
 				3A2C97251DB292D9003CBA0E /* Utilities */,
@@ -320,15 +315,6 @@
 				3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */,
 			);
 			path = Misc;
-			sourceTree = "<group>";
-		};
-		3A2C972E1DB29954003CBA0E /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3A2C972F1DB29965003CBA0E /* Coordinator.swift */,
-				3A2C97311DB29994003CBA0E /* Router.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		3A2C97331DB2A075003CBA0E /* Model */ = {
@@ -716,12 +702,10 @@
 				3A2C97381DB32F97003CBA0E /* ConfigurableCell.swift in Sources */,
 				3A295D641DBE03A10052A9A1 /* AccountantTypeSelectorCell.swift in Sources */,
 				3A295D481DBC8C180052A9A1 /* Persistence.swift in Sources */,
-				3A2C97301DB29965003CBA0E /* Coordinator.swift in Sources */,
 				3A2C97401DB3387F003CBA0E /* EmpoyeesListController.swift in Sources */,
 				3A295D4E1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift in Sources */,
 				3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */,
 				3A295D661DBE08000052A9A1 /* EmployeeFieldViewModel.swift in Sources */,
-				3A2C97321DB29994003CBA0E /* Router.swift in Sources */,
 				3A295D541DBD542A0052A9A1 /* EmployeeListCell.swift in Sources */,
 				3A295D421DBB96770052A9A1 /* UIImageExtensions.swift in Sources */,
 				3A295D441DBBC45E0052A9A1 /* RealmEmployee.swift in Sources */,

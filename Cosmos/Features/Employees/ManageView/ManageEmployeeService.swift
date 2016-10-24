@@ -19,7 +19,7 @@ protocol ManageEmployeeServiceProtocol {
     func save(type: EmployeeType, fields: [EmployeeFieldViewModel])
 }
 
-class ManageEmployeeService2: ManageEmployeeServiceProtocol {
+class ManageEmployeeService: ManageEmployeeServiceProtocol {
     private let realm: Realm
     private var employee: Employee
     private let dataService: EmployeeDataService
