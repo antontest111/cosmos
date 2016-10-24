@@ -16,14 +16,15 @@ enum ManagingMode {
 
 private typealias ViewFieldRow = TableRow<EmployeeFieldViewModel, TextWithTitleCell>
 private typealias EditFieldRow = TableRow<EmployeeFieldViewModel, EditTextWithTitleCell>
+private typealias EmployeeSelectorRow = TableRow<EmployeeTypeSelectorDelegate, EmployeeTypeSelectorCell>
+private typealias EmployeeTitleRow = TableRow<EmployeeType, EmployeeTitleCell>
 
 protocol ManageEmployeeViewProtocol: class {
-    func set(mode: ManagingMode, fields: [[EmployeeFieldViewModel]])
+    func set(mode: ManagingMode, commonFields: [EmployeeFieldViewModel], typeFields: [EmployeeFieldViewModel])
 }
 
-class ManageEmployeeController: UIViewController {
-    fileprivate let tableView: UITableView
-    fileprivate let tableManager: TableManager
+class ManageEmployeeController: UITableViewController {
+    fileprivate lazy var tableManager: TableManager = TableManager(tableView: self.tableView)
     fileprivate let presenter: ManageEmployeePresenter
     
     fileprivate var doneButton: UIBarButtonItem {
@@ -39,23 +40,21 @@ class ManageEmployeeController: UIViewController {
     }
 
     init(presenter: ManageEmployeePresenter) {
-        let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.allowsSelection = false
-        
-        self.tableManager = TableManager(tableView: tableView)
-        self.tableView = tableView
         self.presenter = presenter
-        
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .grouped)
     }
     
     override func viewDidLoad() {
-        view.addSubview(tableView)
+        tableView.allowsSelection = false
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
         
-        tableView.register(cell: TextWithTitleCell.reusableType)
-        tableView.register(cell: EditTextWithTitleCell.reusableType)
+        tableView.register(nib: EmployeeTitleCell.self)
+        tableView.register(nib: TextWithTitleCell.self)
+        tableView.register(nib: EditTextWithTitleCell.self)
         tableView.register(nib: EmployeeTypeSelectorCell.self)
-        tableView.autoPinEdgesToSuperviewEdges()
+        tableView.register(nib: AccountantTypeCell.self)
+        tableView.register(nib: AccountantTypeSelectorCell.self)
         presenter.bind(view: self)
     }
     
@@ -82,27 +81,29 @@ extension ManageEmployeeController: EmployeeTypeSelectorDelegate {
             return presenter.employeeType
         }
         set {
-            print(">>> Selected type: \(newValue)")
-//            employeeType = 
+            presenter.employeeType = newValue
         }
     }
 }
 
 extension ManageEmployeeController: ManageEmployeeViewProtocol {
-    func set(mode: ManagingMode, fields: [[EmployeeFieldViewModel]]) {
+    func set(mode: ManagingMode, commonFields: [EmployeeFieldViewModel], typeFields: [EmployeeFieldViewModel]) {
         var rows: [[Row]] = []
         switch mode {
         case .view:
-            rows.append(contentsOf: fields.map(convertToViewRows))
+            rows.append([EmployeeTitleRow(item: employeeType)])
+            rows.append(convertToViewRows(commonFields))
+            rows.append(convertToViewRows(typeFields))
         case .edit:
-            rows.append([TableRow<EmployeeTypeSelectorDelegate, EmployeeTypeSelectorCell>(item: self)])
-            rows.append(contentsOf: fields.map(convertToEditRows))
+            rows.append([EmployeeSelectorRow(item: self)])
+            rows.append(convertToEditRows(commonFields))
+            rows.append(convertToEditRows(typeFields))
         }
         
         tableManager.setSections(rows: rows)
         switchMode(mode)
     }
-
+    
     private func switchMode(_ mode: ManagingMode) {
         switch mode {
         case .edit:
@@ -116,10 +117,30 @@ extension ManageEmployeeController: ManageEmployeeViewProtocol {
     }
     
     private func convertToViewRows(_ fields: [EmployeeFieldViewModel]) -> [Row] {
-        return fields.map(ViewFieldRow.init(item:))
+        return fields.map(createViewRow)
     }
 
     private func convertToEditRows(_ fields: [EmployeeFieldViewModel]) -> [Row] {
-        return fields.map(EditFieldRow.init(item:))
+        return fields.map(createEditRow)
+    }
+
+    private func createViewRow(_ viewModel: EmployeeFieldViewModel) -> Row {
+        switch viewModel.type {
+        case .accountantType:
+            return TableRow<Int, AccountantTypeCell>(item: viewModel.intValue)
+            
+        default:
+            return ViewFieldRow(item: viewModel)
+        }
+    }
+
+    private func createEditRow(_ viewModel: EmployeeFieldViewModel) -> Row {
+        switch viewModel.type {
+        case .accountantType:
+            return TableRow<EmployeeFieldViewModel, AccountantTypeSelectorCell>(item: viewModel)
+            
+        default:
+            return EditFieldRow(item: viewModel)
+        }
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol EmployeesListPresenterProtocol: class {
-    var dataSource: DataSource<EmployeeType, String> { get }
+    var dataSource: DataSource<EmployeeType, EmployeeInfo> { get }
     
     func tappedAddNewEmployee()
     
@@ -17,20 +17,20 @@ protocol EmployeesListPresenterProtocol: class {
 }
 
 protocol EmployeesListOutput: class {
-    var selectedEmployee: ((Employee2) -> Void)? { get }
+    var selectedEmployee: ((Employee) -> Void)? { get }
     
     var addNewEmployee: (() -> Void)? { get }
 }
 
 class EmployeesListPresenter: EmployeesListPresenterProtocol, EmployeesListOutput {
-    fileprivate let service: EmployeeListService2
-    private(set) lazy var dataSource: DataSource<EmployeeType, String> = DataSource(dataSource: self)
+    fileprivate let service: EmployeeListService
+    private(set) lazy var dataSource: DataSource<EmployeeType, EmployeeInfo> = DataSource(dataSource: self)
     fileprivate weak var view: EmployeesListViewProtocol?
 
-    var selectedEmployee: ((Employee2) -> Void)?
+    var selectedEmployee: ((Employee) -> Void)?
     var addNewEmployee: (() -> Void)?
     
-    init(service: EmployeeListService2) {
+    init(service: EmployeeListService) {
         self.service = service
         service.listener = self
     }
@@ -56,8 +56,11 @@ extension EmployeesListPresenter: DataSourceProtocol {
         return service.employeeType(at: index)
     }
     
-    func row(for indexPath: IndexPath) -> String {
-        return service.employee(at: indexPath).person?.fullName ?? ""
+    func row(for indexPath: IndexPath) -> EmployeeInfo {
+        let employee = service.employee(at: indexPath)
+        
+        return EmployeeInfo(name: employee.person?.fullName ?? "",
+                            details: description(of: employee))
     }
     
     var sectionsCount: Int {
@@ -77,8 +80,7 @@ extension EmployeesListPresenter: DataSourceProtocol {
     }
     
     func canMoveRow(at indexPath: IndexPath) -> Bool {
-//        return true
-        return false
+        return true
     }
     
     func selectedRow(at indexPath: IndexPath) {
@@ -94,4 +96,25 @@ extension EmployeesListPresenter: DataSourceProtocol {
             return IndexPath(row: service.employeesCount(section: source.section) - 1, section: source.section)
         }
     }
+}
+
+private func description(of employee: Employee) -> String {
+    switch employee {
+    case let manager as ManagerProtocol:
+        return "Reception Hours: \(manager.receptionHours)"
+        
+    case let accountant as AccountantProtocol:
+        return "\(workerDescription(accountant)), type: \(accountant.accountantType)"
+        
+    case let worker as WorkerProtocol:
+        return workerDescription(worker)
+        
+    default:
+        assertionFailure()
+        return "UNEXPECTED"
+    }
+}
+
+private func workerDescription(_ worker: WorkerProtocol) -> String {
+    return "Place: \(worker.placeNumber), lunch: \(worker.lunchTime)"
 }

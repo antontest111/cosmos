@@ -17,6 +17,16 @@
 		3A295D4C1DBCC95F0052A9A1 /* EmployeeFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D4B1DBCC95F0052A9A1 /* EmployeeFieldType.swift */; };
 		3A295D4E1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D4D1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift */; };
 		3A295D501DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A295D4F1DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib */; };
+		3A295D541DBD542A0052A9A1 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D531DBD542A0052A9A1 /* EmployeeListCell.swift */; };
+		3A295D561DBD573D0052A9A1 /* EmployeeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A295D551DBD573D0052A9A1 /* EmployeeListCell.xib */; };
+		3A295D581DBD5AA60052A9A1 /* EmployeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D571DBD5AA60052A9A1 /* EmployeeInfo.swift */; };
+		3A295D5A1DBDD8850052A9A1 /* TextWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D591DBDD8850052A9A1 /* TextWithTitleCell.swift */; };
+		3A295D5C1DBDD8B80052A9A1 /* TextWithTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A295D5B1DBDD8B80052A9A1 /* TextWithTitleCell.xib */; };
+		3A295D5E1DBDDED70052A9A1 /* EditTextWithTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A295D5D1DBDDED70052A9A1 /* EditTextWithTitleCell.xib */; };
+		3A295D601DBDE1D60052A9A1 /* EmployeeTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A295D5F1DBDE1D60052A9A1 /* EmployeeTitleCell.xib */; };
+		3A295D621DBDE2520052A9A1 /* EmployeeTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D611DBDE2520052A9A1 /* EmployeeTitleCell.swift */; };
+		3A295D641DBE03A10052A9A1 /* AccountantTypeSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D631DBE03A10052A9A1 /* AccountantTypeSelectorCell.swift */; };
+		3A295D661DBE08000052A9A1 /* EmployeeFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A295D651DBE08000052A9A1 /* EmployeeFieldViewModel.swift */; };
 		3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97051DB2862F003CBA0E /* AppDelegate.swift */; };
 		3A2C970D1DB2862F003CBA0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970C1DB2862F003CBA0E /* Assets.xcassets */; };
 		3A2C97101DB2862F003CBA0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C970E1DB2862F003CBA0E /* LaunchScreen.storyboard */; };
@@ -36,10 +46,8 @@
 		3A2C974D1DB35F3B003CBA0E /* DynamicTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C974C1DB35F3B003CBA0E /* DynamicTableManager.swift */; };
 		3A2C97521DB36958003CBA0E /* StringTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97511DB36958003CBA0E /* StringTableHeader.swift */; };
 		3A2C97551DB36AD5003CBA0E /* EmployeesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97541DB36AD5003CBA0E /* EmployeesHeaderView.swift */; };
-		3A2C97581DB37F66003CBA0E /* EmployeeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97571DB37F66003CBA0E /* EmployeeListService.swift */; };
 		3A2C975C1DB3887A003CBA0E /* ManageEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C975B1DB3887A003CBA0E /* ManageEmployeeController.swift */; };
 		3A2C975E1DB38CC2003CBA0E /* ManageEmployeePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C975D1DB38CC2003CBA0E /* ManageEmployeePresenter.swift */; };
-		3A2C97611DB38E60003CBA0E /* TextWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */; };
 		3A2C97631DB38E75003CBA0E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97621DB38E75003CBA0E /* Functions.swift */; };
 		3A2C97651DB3C0D7003CBA0E /* EditTextWithTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */; };
 		3A2C97681DB3D100003CBA0E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C97671DB3D100003CBA0E /* FeedViewController.swift */; };
@@ -68,6 +76,9 @@
 		3ABE69961DB683BD00B50FE5 /* image14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE698D1DB683BD00B50FE5 /* image14.jpg */; };
 		3ABE69971DB683BD00B50FE5 /* image15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE698E1DB683BD00B50FE5 /* image15.jpg */; };
 		3ABE69991DB6867C00B50FE5 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE69981DB6867C00B50FE5 /* ContainerController.swift */; };
+		3AC92ECC1DBE100200C030DE /* AccountantTypeSelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC92ECB1DBE100200C030DE /* AccountantTypeSelectorCell.xib */; };
+		3AC92ECE1DBE162900C030DE /* AccountantTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC92ECD1DBE162900C030DE /* AccountantTypeCell.xib */; };
+		3AC92ED01DBE16C700C030DE /* AccountantTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC92ECF1DBE16C700C030DE /* AccountantTypeCell.swift */; };
 		7D1D3549A4EF819DFF86B5E4 /* Pods_CosmosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +104,16 @@
 		3A295D4B1DBCC95F0052A9A1 /* EmployeeFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeFieldType.swift; sourceTree = "<group>"; };
 		3A295D4D1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTypeSelectorCell.swift; sourceTree = "<group>"; };
 		3A295D4F1DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeTypeSelectorCell.xib; sourceTree = "<group>"; };
+		3A295D531DBD542A0052A9A1 /* EmployeeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
+		3A295D551DBD573D0052A9A1 /* EmployeeListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeListCell.xib; sourceTree = "<group>"; };
+		3A295D571DBD5AA60052A9A1 /* EmployeeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmployeeInfo.swift; path = Views/EmployeeInfo.swift; sourceTree = "<group>"; };
+		3A295D591DBDD8850052A9A1 /* TextWithTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWithTitleCell.swift; sourceTree = "<group>"; };
+		3A295D5B1DBDD8B80052A9A1 /* TextWithTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextWithTitleCell.xib; sourceTree = "<group>"; };
+		3A295D5D1DBDDED70052A9A1 /* EditTextWithTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTextWithTitleCell.xib; sourceTree = "<group>"; };
+		3A295D5F1DBDE1D60052A9A1 /* EmployeeTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeTitleCell.xib; sourceTree = "<group>"; };
+		3A295D611DBDE2520052A9A1 /* EmployeeTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTitleCell.swift; sourceTree = "<group>"; };
+		3A295D631DBE03A10052A9A1 /* AccountantTypeSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountantTypeSelectorCell.swift; sourceTree = "<group>"; };
+		3A295D651DBE08000052A9A1 /* EmployeeFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeFieldViewModel.swift; sourceTree = "<group>"; };
 		3A2C97021DB2862F003CBA0E /* Cosmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cosmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2C97051DB2862F003CBA0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A2C970C1DB2862F003CBA0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,10 +137,8 @@
 		3A2C974C1DB35F3B003CBA0E /* DynamicTableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DynamicTableManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3A2C97511DB36958003CBA0E /* StringTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTableHeader.swift; sourceTree = "<group>"; };
 		3A2C97541DB36AD5003CBA0E /* EmployeesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesHeaderView.swift; sourceTree = "<group>"; };
-		3A2C97571DB37F66003CBA0E /* EmployeeListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListService.swift; sourceTree = "<group>"; };
 		3A2C975B1DB3887A003CBA0E /* ManageEmployeeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEmployeeController.swift; sourceTree = "<group>"; };
 		3A2C975D1DB38CC2003CBA0E /* ManageEmployeePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEmployeePresenter.swift; sourceTree = "<group>"; };
-		3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWithTitleCell.swift; sourceTree = "<group>"; };
 		3A2C97621DB38E75003CBA0E /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTextWithTitleCell.swift; sourceTree = "<group>"; };
 		3A2C97671DB3D100003CBA0E /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +167,9 @@
 		3ABE698D1DB683BD00B50FE5 /* image14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image14.jpg; sourceTree = "<group>"; };
 		3ABE698E1DB683BD00B50FE5 /* image15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image15.jpg; sourceTree = "<group>"; };
 		3ABE69981DB6867C00B50FE5 /* ContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
+		3AC92ECB1DBE100200C030DE /* AccountantTypeSelectorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountantTypeSelectorCell.xib; sourceTree = "<group>"; };
+		3AC92ECD1DBE162900C030DE /* AccountantTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountantTypeCell.xib; sourceTree = "<group>"; };
+		3AC92ECF1DBE16C700C030DE /* AccountantTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountantTypeCell.swift; sourceTree = "<group>"; };
 		50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F6449A4CEA461F92B7E5D /* Pods_Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B68620A01F60CAB8B5F861 /* Pods-Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,10 +284,9 @@
 		3A2C972A1DB298A5003CBA0E /* Employees */ = {
 			isa = PBXGroup;
 			children = (
-				3A2C97591DB3881C003CBA0E /* ListView */,
-				3A2C975A1DB3883A003CBA0E /* ManageView */,
+				3A2C97591DB3881C003CBA0E /* ListEmployees */,
+				3A2C975A1DB3883A003CBA0E /* ManageEmployee */,
 				3A2C97331DB2A075003CBA0E /* Model */,
-				3A2C97661DB3C589003CBA0E /* Service */,
 			);
 			path = Employees;
 			sourceTree = "<group>";
@@ -355,6 +376,8 @@
 			isa = PBXGroup;
 			children = (
 				3A2C97541DB36AD5003CBA0E /* EmployeesHeaderView.swift */,
+				3A295D531DBD542A0052A9A1 /* EmployeeListCell.swift */,
+				3A295D551DBD573D0052A9A1 /* EmployeeListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,17 +393,19 @@
 			path = ConfigurableCell;
 			sourceTree = "<group>";
 		};
-		3A2C97591DB3881C003CBA0E /* ListView */ = {
+		3A2C97591DB3881C003CBA0E /* ListEmployees */ = {
 			isa = PBXGroup;
 			children = (
 				3A2C97531DB36A8C003CBA0E /* Views */,
 				3A2C97481DB347EE003CBA0E /* EmployeesListPresenter.swift */,
 				3A2C973F1DB3387F003CBA0E /* EmpoyeesListController.swift */,
+				3A295D571DBD5AA60052A9A1 /* EmployeeInfo.swift */,
 			);
+			name = ListEmployees;
 			path = ListView;
 			sourceTree = "<group>";
 		};
-		3A2C975A1DB3883A003CBA0E /* ManageView */ = {
+		3A2C975A1DB3883A003CBA0E /* ManageEmployee */ = {
 			isa = PBXGroup;
 			children = (
 				3A2C975F1DB38E4F003CBA0E /* Views */,
@@ -388,7 +413,9 @@
 				3A2C975D1DB38CC2003CBA0E /* ManageEmployeePresenter.swift */,
 				3A295D491DBCAD220052A9A1 /* ManageEmployeeService.swift */,
 				3A295D4B1DBCC95F0052A9A1 /* EmployeeFieldType.swift */,
+				3A295D651DBE08000052A9A1 /* EmployeeFieldViewModel.swift */,
 			);
+			name = ManageEmployee;
 			path = ManageView;
 			sourceTree = "<group>";
 		};
@@ -396,19 +423,19 @@
 			isa = PBXGroup;
 			children = (
 				3A2C97641DB3C0D7003CBA0E /* EditTextWithTitleCell.swift */,
-				3A2C97601DB38E60003CBA0E /* TextWithTitleCell.swift */,
+				3A295D5D1DBDDED70052A9A1 /* EditTextWithTitleCell.xib */,
 				3A295D4D1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift */,
 				3A295D4F1DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib */,
+				3A295D591DBDD8850052A9A1 /* TextWithTitleCell.swift */,
+				3A295D5B1DBDD8B80052A9A1 /* TextWithTitleCell.xib */,
+				3A295D611DBDE2520052A9A1 /* EmployeeTitleCell.swift */,
+				3A295D5F1DBDE1D60052A9A1 /* EmployeeTitleCell.xib */,
+				3A295D631DBE03A10052A9A1 /* AccountantTypeSelectorCell.swift */,
+				3AC92ECB1DBE100200C030DE /* AccountantTypeSelectorCell.xib */,
+				3AC92ECF1DBE16C700C030DE /* AccountantTypeCell.swift */,
+				3AC92ECD1DBE162900C030DE /* AccountantTypeCell.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3A2C97661DB3C589003CBA0E /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				3A2C97571DB37F66003CBA0E /* EmployeeListService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		3A2C976F1DB503EB003CBA0E /* Service */ = {
@@ -540,16 +567,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A295D601DBDE1D60052A9A1 /* EmployeeTitleCell.xib in Resources */,
 				3A295D501DBCD6580052A9A1 /* EmployeeTypeSelectorCell.xib in Resources */,
 				3ABE69941DB683BD00B50FE5 /* image12.jpg in Resources */,
 				3ABE69831DB6829F00B50FE5 /* image4.jpg in Resources */,
 				3ABE69841DB6829F00B50FE5 /* image5.jpg in Resources */,
+				3AC92ECE1DBE162900C030DE /* AccountantTypeCell.xib in Resources */,
 				3ABE69931DB683BD00B50FE5 /* image11.jpg in Resources */,
 				3ABE697F1DB6829F00B50FE5 /* image0.jpg in Resources */,
 				3ABE69911DB683BD00B50FE5 /* image9.jpg in Resources */,
 				3ABE69801DB6829F00B50FE5 /* image1.jpg in Resources */,
 				3ABE69951DB683BD00B50FE5 /* image13.jpg in Resources */,
 				3ABE69961DB683BD00B50FE5 /* image14.jpg in Resources */,
+				3A295D561DBD573D0052A9A1 /* EmployeeListCell.xib in Resources */,
 				3ABE69971DB683BD00B50FE5 /* image15.jpg in Resources */,
 				3ABE69901DB683BD00B50FE5 /* image8.jpg in Resources */,
 				3ABE69921DB683BD00B50FE5 /* image10.jpg in Resources */,
@@ -559,6 +589,9 @@
 				3ABE69811DB6829F00B50FE5 /* image2.jpg in Resources */,
 				3ABE698F1DB683BD00B50FE5 /* image7.jpg in Resources */,
 				3ABE69821DB6829F00B50FE5 /* image3.jpg in Resources */,
+				3A295D5C1DBDD8B80052A9A1 /* TextWithTitleCell.xib in Resources */,
+				3A295D5E1DBDDED70052A9A1 /* EditTextWithTitleCell.xib in Resources */,
+				3AC92ECC1DBE100200C030DE /* AccountantTypeSelectorCell.xib in Resources */,
 				3A2C970D1DB2862F003CBA0E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,21 +704,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2C974B1DB35883003CBA0E /* DataSource.swift in Sources */,
+				3A295D581DBD5AA60052A9A1 /* EmployeeInfo.swift in Sources */,
 				3A295D4A1DBCAD220052A9A1 /* ManageEmployeeService.swift in Sources */,
+				3A295D621DBDE2520052A9A1 /* EmployeeTitleCell.swift in Sources */,
 				3A2C97781DB521D4003CBA0E /* QuoteTableCell.swift in Sources */,
 				3A295D461DBC7FA20052A9A1 /* EmployeeService.swift in Sources */,
 				3A2C973E1DB32FB9003CBA0E /* TableManager.swift in Sources */,
-				3A2C97611DB38E60003CBA0E /* TextWithTitleCell.swift in Sources */,
 				3A2C97711DB503FE003CBA0E /* FeedParser.swift in Sources */,
 				3A2C973C1DB32FAF003CBA0E /* TableSection.swift in Sources */,
 				3A2C97441DB344BF003CBA0E /* UITableViewExtensions.swift in Sources */,
 				3A2C97381DB32F97003CBA0E /* ConfigurableCell.swift in Sources */,
+				3A295D641DBE03A10052A9A1 /* AccountantTypeSelectorCell.swift in Sources */,
 				3A295D481DBC8C180052A9A1 /* Persistence.swift in Sources */,
 				3A2C97301DB29965003CBA0E /* Coordinator.swift in Sources */,
 				3A2C97401DB3387F003CBA0E /* EmpoyeesListController.swift in Sources */,
 				3A295D4E1DBCD6340052A9A1 /* EmployeeTypeSelectorCell.swift in Sources */,
 				3A2C97351DB2A081003CBA0E /* Employee.swift in Sources */,
+				3A295D661DBE08000052A9A1 /* EmployeeFieldViewModel.swift in Sources */,
 				3A2C97321DB29994003CBA0E /* Router.swift in Sources */,
+				3A295D541DBD542A0052A9A1 /* EmployeeListCell.swift in Sources */,
 				3A295D421DBB96770052A9A1 /* UIImageExtensions.swift in Sources */,
 				3A295D441DBBC45E0052A9A1 /* RealmEmployee.swift in Sources */,
 				3A2C976A1DB3D117003CBA0E /* FeedPresenter.swift in Sources */,
@@ -695,12 +732,13 @@
 				3A2C97421DB339E6003CBA0E /* StringTableCell.swift in Sources */,
 				3A295D401DBB20660052A9A1 /* GalleryPresenter.swift in Sources */,
 				3A2C97491DB347EE003CBA0E /* EmployeesListPresenter.swift in Sources */,
+				3AC92ED01DBE16C700C030DE /* AccountantTypeCell.swift in Sources */,
 				3A2C97061DB2862F003CBA0E /* AppDelegate.swift in Sources */,
 				3A2C973A1DB32FA4003CBA0E /* TableRow.swift in Sources */,
 				3A2C97631DB38E75003CBA0E /* Functions.swift in Sources */,
+				3A295D5A1DBDD8850052A9A1 /* TextWithTitleCell.swift in Sources */,
 				3A2C976C1DB3D122003CBA0E /* FeedService.swift in Sources */,
 				3A2C97651DB3C0D7003CBA0E /* EditTextWithTitleCell.swift in Sources */,
-				3A2C97581DB37F66003CBA0E /* EmployeeListService.swift in Sources */,
 				3A2C975C1DB3887A003CBA0E /* ManageEmployeeController.swift in Sources */,
 				3A2C975E1DB38CC2003CBA0E /* ManageEmployeePresenter.swift in Sources */,
 				3A2C974D1DB35F3B003CBA0E /* DynamicTableManager.swift in Sources */,
@@ -761,6 +799,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -811,6 +850,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -840,10 +880,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BB44E48D7B7C8F70755308D /* Pods-Cosmos.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K26429Q97U;
 				INFOPLIST_FILE = Cosmos/Misc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = anton.Cosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -855,10 +896,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96B68620A01F60CAB8B5F861 /* Pods-Cosmos.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K26429Q97U;
 				INFOPLIST_FILE = Cosmos/Misc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = anton.Cosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";

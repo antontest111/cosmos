@@ -26,8 +26,6 @@ class DynamicTableManager<Section, Row, Cell: ConfigurableCell, Header: Configur
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(cell: Cell.reusableType)
-        tableView.register(header: Header.reusableType)
     }
     
     func reloadData() {

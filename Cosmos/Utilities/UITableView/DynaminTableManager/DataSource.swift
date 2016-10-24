@@ -8,8 +8,8 @@
 
 import Foundation
 
+/// Type erasure for DataSourceProtocol
 class DataSource<Section, Row>: DataAccessProtocol {
-    //TODO: rename!
     private let dataAccess: DataAccessProtocol
     private let readRow: (IndexPath) -> Row
     private let readSection: (Int) -> Section
@@ -57,7 +57,6 @@ class DataSource<Section, Row>: DataAccessProtocol {
     }
 }
 
-//TODO: rename!
 protocol DataAccessProtocol {
     var sectionsCount: Int { get }
     

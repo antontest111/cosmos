@@ -9,87 +9,55 @@
 import Foundation
 import RealmSwift
 
-typealias UniqueId = String
+class EmployeeObject: Object, Indexable {
+    dynamic var uid: UniqueId = UUID().uuidString
+    dynamic var person: Person?
+    dynamic var salary: Money = 0
+    dynamic var index: Int = 0
 
-class ListItem: Object {
-    dynamic var order: Int32 = 0
-//    dynamic var employee: Employee2? = nil
-//    let employees: List<Employee2> = List()
+    override static func primaryKey() -> String? {
+        return "uid"
+    }
+}
+
+class Manager: EmployeeObject, ManagerProtocol {
+    var type: EmployeeType {
+        return .manager
+    }
+    
+    dynamic var receptionHours: Time = ""
+}
+
+class Worker: EmployeeObject, WorkerProtocol {
+    var type: EmployeeType {
+        return .worker
+    }
+
+    dynamic var placeNumber: PlaceNumber = ""
+    dynamic var lunchTime: Time = ""
+}
+
+class Accountant: Worker, AccountantProtocol {
+    override var type: EmployeeType {
+        return .accountant
+    }
+
+    var accountantType: AccountantType {
+        get {
+            return AccountantType(rawValue: accountantTypeRaw) ?? .payroll
+        }
+        set {
+            accountantTypeRaw = newValue.rawValue
+        }
+    }
+    dynamic var accountantTypeRaw: Int = AccountantType.payroll.rawValue
 }
 
 class Person: Object {
-    dynamic var uid: UniqueId = UUID().uuidString
     dynamic var firstName: String = ""
     dynamic var lastName: String = ""
     
     var fullName: String {
         return "\(firstName) \(lastName)"
     }
-}
-
-protocol Employee2: class {
-    var uid: UniqueId { get }
-
-    var person: Person? { get set }
-    
-    var type: EmployeeType { get }
-    
-    var salary: Money { get set }
-}
-
-protocol WorkerProtocol: Employee2 {
-    var attributes: WorkerAttributes? { get set }
-}
-
-protocol AccountantProtocol: WorkerProtocol {
-    var accountantType: AccountantType { get set }
-}
-
-//////////////////////
-
-class Manager: Object, Employee2 {
-    dynamic var uid: UniqueId = UUID().uuidString
-    dynamic var person: Person?
-    let type: EmployeeType = .manager
-    dynamic var salary: Money = 0
-    
-    dynamic var receptionHours: Time = ""
-    
-    override static func primaryKey() -> String? {
-        return "uid"
-    }
-}
-
-class Worker: Object, WorkerProtocol {
-    dynamic var uid: UniqueId = UUID().uuidString
-    dynamic var person: Person?
-    let type: EmployeeType = .worker
-    dynamic var salary: Money = 0
-    
-    dynamic var attributes: WorkerAttributes?
-
-    override static func primaryKey() -> String? {
-        return "uid"
-    }
-}
-
-class Accountant: Object, AccountantProtocol {
-    dynamic var uid: UniqueId = UUID().uuidString
-    dynamic var person: Person?
-    let type: EmployeeType = .accountant
-    dynamic var salary: Money = 0
-
-    dynamic var attributes: WorkerAttributes?
-    dynamic var accountantType: AccountantType = ""
-
-    override static func primaryKey() -> String? {
-        return "uid"
-    }
-}
-
-////////////////////
-
-class WorkerAttributes: Object {
-    dynamic var placeNumber: PlaceNumber = ""
-    dynamic var lunchTime: Time = ""
 }

@@ -25,25 +25,32 @@ class Persistence {
         
         guard realm.objects(Person.self).isEmpty else { return  }
         
+        var index = -1
+        let nextIndex = { () -> Int in index += 1; return index }
+        
         let managers = [
-            Manager(value: [generateId(), [generateId(), "Jane", "Manager1"], 100, "1-2"]),
-            Manager(value: [generateId(), [generateId(), "Harry", "Manager2"], 100, "1-2"]),
-            Manager(value: [generateId(), [generateId(), "Olivia", "Manager3"], 100, "1-2"]),
-            Manager(value: [generateId(), [generateId(), "Martin", "Manager4"], 100, "1-2"])
+            Manager(value: [generateId(), ["Jane", "Manager1"], 100, nextIndex(), "1-2"]),
+            Manager(value: [generateId(), ["Harry", "Manager2"], 100, nextIndex(), "1-2"]),
+            Manager(value: [generateId(), ["Olivia", "Manager3"], 100, nextIndex(), "1-2"]),
+            Manager(value: [generateId(), ["Martin", "Manager4"], 100, nextIndex(), "1-2"])
         ]
+        
+        index = -1
         
         let workers = [
-            Worker(value: [generateId(), [generateId(), "Helen", "Worker1"], 100, ["place 1", "12-13"]]),
-            Worker(value: [generateId(), [generateId(), "Justin", "Worker2"], 100, ["place 2", "12-13"]]),
-            Worker(value: [generateId(), [generateId(), "Mario", "Worker3"], 100, ["place 3", "12-13"]]),
-            Worker(value: [generateId(), [generateId(), "Olga", "Worker4"], 100, ["place 4", "12-13"]]),
+            Worker(value: [generateId(), ["Helen", "Worker1"], 100, nextIndex(), "place 1", "12-13"]),
+            Worker(value: [generateId(), ["Justin", "Worker2"], 100, nextIndex(), "place 2", "12-13"]),
+            Worker(value: [generateId(), ["Mario", "Worker3"], 100, nextIndex(), "place 3", "12-13"]),
+            Worker(value: [generateId(), ["Olga", "Worker4"], 100, nextIndex(), "place 4", "12-13"]),
         ]
         
+        index = -1
+        
         let accountants = [
-            Accountant(value: [generateId(), [generateId(), "Helen", "Accountant1"], 100, ["place A1", "12-13"], "type1"]),
-            Accountant(value: [generateId(), [generateId(), "Mark", "Accountant2"], 100, ["place A2", "12-13"], "type2"]),
-            Accountant(value: [generateId(), [generateId(), "Clark", "Accountant3"], 100, ["place A3", "12-13"], "type1"]),
-            Accountant(value: [generateId(), [generateId(), "Brin", "Accountant4"], 100, ["place A4", "12-13"], "type2"]),
+            Accountant(value: [generateId(), ["Helen", "Accountant1"], 100, nextIndex(), "place A1", "12-13", 0]),
+            Accountant(value: [generateId(), ["Mark", "Accountant2"], 100, nextIndex(), "place A2", "12-13", 1]),
+            Accountant(value: [generateId(), ["Clark", "Accountant3"], 100, nextIndex(), "place A3", "12-13", 0]),
+            Accountant(value: [generateId(), ["Brin", "Accountant4"], 100, nextIndex(), "place A4", "12-13", 1]),
         ]
         
         try! realm.write {

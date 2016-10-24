@@ -11,12 +11,11 @@ import UIKit
 import PureLayout
 
 protocol EmployeesListViewProtocol: class {
-//    func setEditMode(enabled: Bool)
     func reloadData()
 }
 
 class EmployeesListController: UIViewController, EmployeesListViewProtocol {
-    private let tableManager: DynamicTableManager<EmployeeType, String, StringTableCell, EmployeesTableHeader>
+    private let tableManager: DynamicTableManager<EmployeeType, EmployeeInfo, EmployeeListCell, EmployeesTableHeader>
     private let tableView: UITableView
     
     private let presenter: EmployeesListPresenterProtocol
@@ -34,22 +33,39 @@ class EmployeesListController: UIViewController, EmployeesListViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private var editButton: UIBarButtonItem? {
+        return navigationItem.leftBarButtonItem
+    }
+    
     override func viewDidLoad() {
+        tableView.register(nib: EmployeeListCell.self)
+        tableView.register(header: EmployeesTableHeader.self)
+        tableView.rowHeight = 60
+
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
         
         presenter.bind(view: self)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Edit", style: .plain, target: self, action: #selector(editMode))
+            barButtonSystemItem: .add, target: self, action: #selector(tappedAddEmployee))
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "Edit", style: .plain, target: self, action: #selector(toggleEditMode))
     }
     
-    func editMode() {
+    func toggleEditMode() {
         if tableView.isEditing {
+            editButton?.title = "Edit"
             tableView.setEditing(false, animated: true)
         } else {
+            editButton?.title = "Done"
             tableView.setEditing(true, animated: true)
         }
+    }
+    
+    func tappedAddEmployee() {
+        presenter.tappedAddNewEmployee()
     }
     
     func reloadData() {

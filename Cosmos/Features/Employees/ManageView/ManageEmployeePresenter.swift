@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ManageEmployeePresenterProtocol: class {
-    var employeeType: EmployeeType { get }
+    var employeeType: EmployeeType { get set }
     
     func tappedEdit()
     
@@ -24,33 +24,51 @@ class ManageEmployeePresenter: ManageEmployeePresenterProtocol {
     private let service: ManageEmployeeServiceProtocol
     private weak var view: ManageEmployeeViewProtocol?
     
-    private var fields: [[EmployeeFieldViewModel]] = []
+    private var commonFields: [EmployeeFieldViewModel] = []
+    private var typeFields: [EmployeeFieldViewModel] = []
     
     init(service: ManageEmployeeServiceProtocol) {
         self.service = service
+        employeeType = service.employeeType
     }
     
     var employeeType: EmployeeType {
-        return service.employeeType
+        didSet {
+            typeFields = service.typeFields(of: employeeType)
+            switchToEdit()
+        }
     }
     
     func bind(view: ManageEmployeeViewProtocol) {
         self.view = view
-        self.fields = service.fields()
-        view.set(mode: .view, fields: fields)
+        resetViewMode()
     }
     
     func tappedEdit() {
-        view?.set(mode: .edit, fields: fields)
+        switchToEdit()
     }
     
     func tappedCancel() {
-        self.fields = service.fields()
-        view?.set(mode: .view, fields: fields)
+        resetViewMode()
     }
     
     func tappedSave() {
-        view?.set(mode: .view, fields: fields)
-        service.save(fields: Array(fields.joined()))
+        // TODO: this is hack
+        view?.set(mode: .view, commonFields: commonFields, typeFields: typeFields)
+        
+        service.save(type: employeeType, fields: commonFields + typeFields)
+        
+        resetViewMode()
+    }
+    
+    private func switchToEdit() {
+        view?.set(mode: .edit, commonFields: commonFields, typeFields: typeFields)
+    }
+    
+    private func resetViewMode() {
+        employeeType = service.employeeType
+        commonFields = service.commonFields()
+        typeFields = service.typeFields(of: employeeType)
+        view?.set(mode: .view, commonFields: commonFields, typeFields: typeFields)
     }
 }

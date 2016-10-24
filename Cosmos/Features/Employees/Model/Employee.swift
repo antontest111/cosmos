@@ -8,46 +8,6 @@
 
 import Foundation
 
-//struct Employee {
-//    let id: Int
-//    
-//    var personID: PersonID
-//    var salary: Money
-//    var role: EmployeeRole
-//    
-//    var type: EmployeeType {
-//        switch role {
-//        case .manager:
-//            return .manager
-//        
-//        case .worker(_, _, .simple):
-//            return .worker
-//        
-//        case .worker(_, _, .accountant):
-//            return .accountant
-//        }
-//    }
-//}
-//
-//struct PersonID {
-//    var firstName: String
-//    var lastName: String
-//    
-//    var fullName: String {
-//        return "\(firstName) \(lastName)"
-//    }
-//}
-//
-//enum EmployeeRole {
-//    case manager(receptionHours: Time)
-//    case worker(placeNumber: PlaceNumber, lunchTime: Time, type: WorkerType)
-//}
-//
-//enum WorkerType {
-//    case simple
-//    case accountant(AccountantType)
-//}
-
 enum EmployeeType: Int {
     case manager = 0
     case worker
@@ -56,7 +16,38 @@ enum EmployeeType: Int {
     static var values: [EmployeeType] = [.manager, .worker, .accountant]
 }
 
+protocol Indexable: class {
+    var index: Int { get set }
+}
+
+protocol Employee: class, Indexable {
+    var uid: UniqueId { get }
+    var person: Person? { get set }
+    var type: EmployeeType { get }
+    var salary: Money { get set }
+    
+    static func primaryKey() -> String?
+}
+
+protocol ManagerProtocol: Employee {
+    var receptionHours: Time { get set }
+}
+
+protocol WorkerProtocol: Employee {
+    var placeNumber: PlaceNumber { get set }
+    var lunchTime: Time { get set }
+}
+
+protocol AccountantProtocol: WorkerProtocol {
+    var accountantType: AccountantType { get set }
+}
+
+enum AccountantType: Int {
+    case payroll
+    case products
+}
+
 typealias Money = Int
 typealias PlaceNumber = String
 typealias Time = String
-typealias AccountantType = String
+typealias UniqueId = String

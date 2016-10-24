@@ -47,8 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         controller.title = "Employees"
 
         presenter.selectedEmployee = { [weak controller] employee in
-//            let presenter = ManageEmployeePresenter(employee: employee, service: service)
-            let service = ManageEmployeeService2(employee: employee, realm: realm)
+            let service = ManageEmployeeService2(employee: employee, realm: realm, dataService: service)
+            let presenter = ManageEmployeePresenter(service: service)
+            let manage = ManageEmployeeController(presenter: presenter)
+            controller?.navigationController?.pushViewController(manage, animated: true)
+        }
+        
+        presenter.addNewEmployee = { [weak controller] in
+            let service = ManageEmployeeService2(employee: Manager(), realm: realm, dataService: service)
             let presenter = ManageEmployeePresenter(service: service)
             let manage = ManageEmployeeController(presenter: presenter)
             controller?.navigationController?.pushViewController(manage, animated: true)

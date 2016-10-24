@@ -15,6 +15,8 @@ protocol FeedViewProtocol: class {
     
     func hideProgress()
     
+    func show(error: String)
+    
     func set(quotes: [Quote])
 }
 
@@ -32,6 +34,8 @@ class FeedViewController: UIViewController {
         self.presenter = presenter
         
         super.init(nibName: nil, bundle: nil)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(tappedReload))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,7 +48,7 @@ class FeedViewController: UIViewController {
         view.addSubview(tableView)
         tableView.autoPinEdgesToSuperviewEdges()
         
-        tableView.register(nib: QuoteTableCell.reusableType)
+        tableView.register(nib: QuoteTableCell.self)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         tableView.allowsSelection = false
@@ -54,17 +58,29 @@ class FeedViewController: UIViewController {
         
         presenter.bind(view: self)
     }
+    
+    func tappedReload() {
+        presenter.requestReload()
+    }
 }
 
 extension FeedViewController: FeedViewProtocol {
     func showProgress() {
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
     func hideProgress() {
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
+        navigationItem.rightBarButtonItem?.isEnabled = true
+    }
+    
+    func show(error: String) {
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "This is fine", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     func set(quotes: [Quote]) {
