@@ -29,9 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func createRootController() -> UIViewController {
         let rootViewController = UITabBarController(nibName: nil, bundle: nil)
         rootViewController.viewControllers = [
-            configureTab(withName: "Employees", image: nil, controller: createEmployees()),
-            configureTab(withName: "Gallery", image: nil, controller: createGallery()),
-            configureTab(withName: "Service", image: nil, controller: createQuotes())
+            configureTab(withName: "Employees", image: UIImage(named: "employees"), controller: createEmployees()),
+            configureTab(withName: "Gallery", image: UIImage(named: "gallery"), controller: createGallery()),
+            configureTab(withName: "Service", image: UIImage(named: "quotes"), controller: createQuotes())
         ]
         
         return rootViewController

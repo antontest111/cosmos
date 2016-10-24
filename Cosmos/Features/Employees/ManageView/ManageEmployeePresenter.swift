@@ -53,12 +53,15 @@ class ManageEmployeePresenter: ManageEmployeePresenterProtocol {
     }
     
     func tappedSave() {
-        // TODO: this is hack
-        view?.set(mode: .view, commonFields: commonFields, typeFields: typeFields)
-        
-        service.save(type: employeeType, fields: commonFields + typeFields)
-        
-        resetViewMode()
+        do {
+            // TODO: this is hack
+            view?.set(mode: .view, commonFields: commonFields, typeFields: typeFields)
+            
+            try service.save(type: employeeType, fields: commonFields + typeFields)
+            resetViewMode()
+        } catch {
+            view?.show(error: "Couldn't not save changes")
+        }
     }
     
     private func switchToEdit() {

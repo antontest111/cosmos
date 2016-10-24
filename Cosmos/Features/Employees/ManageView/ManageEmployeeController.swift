@@ -19,7 +19,7 @@ private typealias EditFieldRow = TableRow<EmployeeFieldViewModel, EditTextWithTi
 private typealias EmployeeSelectorRow = TableRow<EmployeeTypeSelectorDelegate, EmployeeTypeSelectorCell>
 private typealias EmployeeTitleRow = TableRow<EmployeeType, EmployeeTitleCell>
 
-protocol ManageEmployeeViewProtocol: class {
+protocol ManageEmployeeViewProtocol: class, ErrorDisplay {
     func set(mode: ManagingMode, commonFields: [EmployeeFieldViewModel], typeFields: [EmployeeFieldViewModel])
 }
 

@@ -16,7 +16,7 @@ protocol ManageEmployeeServiceProtocol {
 
     func typeFields(of type: EmployeeType) -> [EmployeeFieldViewModel]
 
-    func save(type: EmployeeType, fields: [EmployeeFieldViewModel])
+    func save(type: EmployeeType, fields: [EmployeeFieldViewModel]) throws
 }
 
 class ManageEmployeeService: ManageEmployeeServiceProtocol {
@@ -104,21 +104,21 @@ class ManageEmployeeService: ManageEmployeeServiceProtocol {
         ]
     }
     
-    func save(type: EmployeeType, fields: [EmployeeFieldViewModel]) {
-        try! realm.write {
+    func save(type: EmployeeType, fields: [EmployeeFieldViewModel]) throws {
+        try realm.write {
             if type != employee.type {
-                changeEmployee(toType: type)
+                try changeEmployee(toType: type)
             }
             
             update(fields)
         }
     }
     
-    private func changeEmployee(toType type: EmployeeType) {
+    private func changeEmployee(toType type: EmployeeType) throws {
         let person = employee.person
         let salary = employee.salary
         
-        dataService.remove(employee: employee)
+        try dataService.remove(employee: employee)
         employee = dataService.createEmployee(ofType: type)
         
         employee.person = person ?? Person()

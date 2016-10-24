@@ -12,7 +12,7 @@ import RealmSwift
 protocol EmployeeDataService: class {
     func createEmployee(ofType: EmployeeType) -> Employee
     
-    func remove(employee: Employee)
+    func remove(employee: Employee) throws
     
     func createIfNotPresent(employee: Employee)
 }
@@ -28,9 +28,9 @@ protocol EmployeeListService: class {
     
     func employeeType(at index: Int) -> EmployeeType
     
-    func delete(at indexPath: IndexPath)
+    func delete(at indexPath: IndexPath) throws
     
-    func move(from fromIndexPath: IndexPath, to toIndexPath: IndexPath)
+    func move(from fromIndexPath: IndexPath, to toIndexPath: IndexPath) throws
 }
 
 protocol EmployeeListServiceListener: class {
@@ -80,15 +80,15 @@ class EmployeeService: EmployeeListService {
         return employees[index].employeeType
     }
     
-    func delete(at indexPath: IndexPath) {
+    func delete(at indexPath: IndexPath) throws {
         guard let object = employee(at: indexPath) as? Object else { return }
         
-        try! realm.write {
+        try realm.write {
             realm.delete(object)
         }
     }
     
-    func move(from fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
+    func move(from fromIndexPath: IndexPath, to toIndexPath: IndexPath) throws {
         precondition(fromIndexPath.section == toIndexPath.section)
         
         let section = employees[toIndexPath.section]
@@ -102,7 +102,7 @@ class EmployeeService: EmployeeListService {
         let range = from > to ? (to..<from) : ((from + 1)..<(to + 1))
         let delta = from > to ? 1 : -1
         
-        try! realm.write {
+        try realm.write {
             for index in range {
                 let item = section[index]
                 item.index = item.index + delta

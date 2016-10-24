@@ -77,6 +77,7 @@
 		3AC92ECC1DBE100200C030DE /* AccountantTypeSelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC92ECB1DBE100200C030DE /* AccountantTypeSelectorCell.xib */; };
 		3AC92ECE1DBE162900C030DE /* AccountantTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC92ECD1DBE162900C030DE /* AccountantTypeCell.xib */; };
 		3AC92ED01DBE16C700C030DE /* AccountantTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC92ECF1DBE16C700C030DE /* AccountantTypeCell.swift */; };
+		3AC92ED21DBE5AEF00C030DE /* ErrorDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC92ED11DBE5AEF00C030DE /* ErrorDisplay.swift */; };
 		7D1D3549A4EF819DFF86B5E4 /* Pods_CosmosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		3AC92ECB1DBE100200C030DE /* AccountantTypeSelectorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountantTypeSelectorCell.xib; sourceTree = "<group>"; };
 		3AC92ECD1DBE162900C030DE /* AccountantTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountantTypeCell.xib; sourceTree = "<group>"; };
 		3AC92ECF1DBE16C700C030DE /* AccountantTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountantTypeCell.swift; sourceTree = "<group>"; };
+		3AC92ED11DBE5AEF00C030DE /* ErrorDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplay.swift; sourceTree = "<group>"; };
 		50E4C79AD74665361CB2E8D1 /* Pods_CosmosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521F6449A4CEA461F92B7E5D /* Pods_Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B68620A01F60CAB8B5F861 /* Pods-Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmos/Pods-Cosmos.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				3A2C97361DB2A575003CBA0E /* UITableView */,
 				3A2C97621DB38E75003CBA0E /* Functions.swift */,
 				3A295D411DBB96770052A9A1 /* UIImageExtensions.swift */,
+				3AC92ED11DBE5AEF00C030DE /* ErrorDisplay.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				3A2C975C1DB3887A003CBA0E /* ManageEmployeeController.swift in Sources */,
 				3A2C975E1DB38CC2003CBA0E /* ManageEmployeePresenter.swift in Sources */,
 				3A2C974D1DB35F3B003CBA0E /* DynamicTableManager.swift in Sources */,
+				3AC92ED21DBE5AEF00C030DE /* ErrorDisplay.swift in Sources */,
 				3A2C97461DB34630003CBA0E /* TableManagerDelegate.swift in Sources */,
 				3ABE69991DB6867C00B50FE5 /* ContainerController.swift in Sources */,
 				3A2C977A1DB5293D003CBA0E /* GalleryViewController.swift in Sources */,

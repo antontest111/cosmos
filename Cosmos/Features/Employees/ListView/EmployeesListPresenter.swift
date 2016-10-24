@@ -72,11 +72,19 @@ extension EmployeesListPresenter: DataSourceProtocol {
     }
     
     func delete(rowAt indexPath: IndexPath) {
-        service.delete(at: indexPath)
+        do {
+            try service.delete(at: indexPath)
+        } catch {
+            view?.show(error: "Couldn't delete row")
+        }
     }
     
     func moveRow(from: IndexPath, to: IndexPath) {
-        service.move(from: from, to: to)
+        do {
+            try service.move(from: from, to: to)
+        } catch {
+            view?.show(error: "Couldn't move row")
+        }
     }
     
     func canMoveRow(at indexPath: IndexPath) -> Bool {

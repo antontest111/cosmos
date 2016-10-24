@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-protocol FeedViewProtocol: class {
+protocol FeedViewProtocol: class, ErrorDisplay {
     func showProgress()
     
     func hideProgress()
@@ -75,12 +75,6 @@ extension FeedViewController: FeedViewProtocol {
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         navigationItem.rightBarButtonItem?.isEnabled = true
-    }
-    
-    func show(error: String) {
-        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "This is fine", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
     }
     
     func set(quotes: [Quote]) {

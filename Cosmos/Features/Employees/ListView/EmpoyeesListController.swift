@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import PureLayout
 
-protocol EmployeesListViewProtocol: class {
+protocol EmployeesListViewProtocol: class, ErrorDisplay {
     func reloadData()
 }
 
